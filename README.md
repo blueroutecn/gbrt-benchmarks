@@ -18,3 +18,7 @@ The following parameters were used to build create the classifier using a grid:
 
 * `max_depth`: 1, 5, 8
 * `n_estimators`: 1, 10, 100
+
+### Results
+
+In the `results` folder, the results of the benchmark have been dumped using `joblib`.
