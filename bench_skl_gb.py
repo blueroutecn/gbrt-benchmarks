@@ -8,9 +8,9 @@ import joblib
 
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import ParameterGrid
-from sklearn.model_selection ibmport GridSearchCV
+from sklearn.model_selection import GridSearchCV
 
-import benchmarks.misc
+import misc
 
 N_ESTIMATORS = np.array([1, 1e1, 1e2], dtype=int)
 LEARNING_RATE = 0.1
@@ -45,7 +45,7 @@ def bench_skl(X, y, T, valid, **params):
 store_dir = sys.argv[1]
 
 # Create several array for the data
-array_data = [benchmarks.misc.generate_samples(ns, nf, RND_SEED)
+array_data = [misc.generate_samples(ns, nf, RND_SEED)
               for ns in N_SAMPLES for nf in N_FEATURES]
 
 # Setup the parameters
@@ -71,7 +71,7 @@ params['criterion'] = ['friedman_mse']
 params_list = list(ParameterGrid(params))
 
 # Save only the time for the moment
-res_skl = [(data[0].shape, p, benchmarks.misc.bench(bench_skl, data, **p))
+res_skl = [(data[0].shape, p, misc.bench(bench_skl, data, **p))
            for p in params_list for data in array_data]
 
 # Check that the path is existing
