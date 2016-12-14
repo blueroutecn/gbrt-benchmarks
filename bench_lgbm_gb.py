@@ -44,6 +44,7 @@ def bench_lgbm(X, y, T, valid, **params):
 
     return score, end_data_t, end_fit_t
 
+
 if __name__ == '__main__':
     USAGE = """usage: python %s dataset path_results n_try
 

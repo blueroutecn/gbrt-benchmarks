@@ -37,7 +37,7 @@ if __name__ == '__main__':
         - n_try is the number of run
     """
 
-    N_ESTIMATORS = np.array([1, 1e1, 1e2], dtype=int)
+    N_ESTIMATORS = np.array([1, 1e1], dtype=int)
     LEARNING_RATE = 0.1
     MIN_IMPURITY_SPLIT = 1e-7
     MAX_DEPTH = np.array([1, 3, 5, 8], dtype=int)
