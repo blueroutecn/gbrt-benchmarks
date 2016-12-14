@@ -66,23 +66,18 @@ def bench(func, data, n=10, **params):
     D: ndarray, shape (2, )
         return the score and elapsed time of the function.
     """
-    assert n > 2
-    score = np.inf
-    try:
-        time = []
-        for i in range(n):
-            score, t = func(*data, **params)
-            time.append(dtime_to_seconds(t))
-        # remove extremal values
-        time.pop(np.argmax(time))
-        time.pop(np.argmin(time))
-    except Exception as detail:
-        print('%s error in function %s: ' % (repr(detail), func))
-        time = []
-    return score, np.array(time)
 
+    # for the given number of try
+    #assert n > 2
+    score = []
+    time_data = []
+    time_fit = []
+    for i in range(n):
+        sc, t_data, t_fit = func(*data, **params)
 
-USAGE = """usage: python %s dataset
+        # Append the values
+        score.append(sc)
+        time_data.append(dtime_to_seconds(t_data))
+        time_fit.append(dtime_to_seconds(t_fit))
 
-where dataset is one of {madelon, arcene}
-"""
+    return np.array(score), np.array(time_data), np.array(time_fit)

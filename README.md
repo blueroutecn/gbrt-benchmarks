@@ -43,6 +43,22 @@ cd ../python-package
 python setup.py install
 ```
 
+## Parameters
+
+### `scikit-learn`
+
+We used the following list of parameters:
+
+### `xgboost`
+
+We fixed the following parameters to be similar of `scikit-learn`.
+
+### `LightGBM`
+
+We fixed the following parameters to be similar of `scikit-learn`.
+
+A useful list of alias between parameters is available in [`config.h`](https://github.com/Microsoft/LightGBM/blob/master/include/LightGBM/config.h#L316).
+
 ## Dataset
 
 We used the following datasets to benchmark the libraries:
