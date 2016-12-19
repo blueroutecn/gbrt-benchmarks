@@ -77,8 +77,8 @@ The following parameters were used to build the dataset using a grid:
 
 The following parameters were used to build create the classifier using a grid:
 
-* `max_depth`: 1, 5, 8
-* `n_estimators`: 1, 10, 100
+* `max_depth`: 1, 3, 5, 8
+* `n_estimators`: 1, 10
 
 #### Results
 
