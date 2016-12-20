@@ -49,13 +49,69 @@ python setup.py install
 
 We used the following list of parameters:
 
+| Parameters                   | Value            |
+|------------------------------|------------------|
+| `'learning_rate'`            | `0.1`            |
+| `'loss'`                     | `'deviance'`     |
+| `'min_weight_fraction_leaf'` | `0.`             |
+| `'subsample'`                | `1.`             |
+| `'max_features'`             | `None`           |
+| `'min_samples_split'`        | `2`              |
+| `'min_samples_leaf'`         | `1`              |
+| `'min_impurity_split`'       | `1`              |
+| `'max_leaf_nodes'`           | `None`           |
+| `'presort'`                  | `'auto'`         |
+| `'init'`                     | `None`           |
+| `'warm_start'`               | `False`          |
+| `'verbose'`                  | `0`              |
+| `'random_state'`             | `42`             |
+| `'criterion'`                | `'friedman_mse'` |
+
 ### `xgboost`
 
 We fixed the following parameters to be similar of `scikit-learn`.
 
+| Parameters                   | Value               |
+|------------------------------|---------------------|
+| `'booster'`                  | `'gbtree'`          |
+| `'eta'`                      | `0.1`               |
+| `'objective'`                | `'binary:logistic'` |
+| `'subsample'`                | `1.`                |
+| `'colsample_bytree'`         | `1.`                |
+| `'colsample_bylevel'`        | `1.`                |
+| `'min_child_weight'`         | `1`                 |
+| `'gamma`'                    | `1`                 |
+| `'max_delta_step'`           | `0`                 |
+| `'alpha'`                    | `0.`                |
+| `'delta'`                    | `0.`                |
+| `'tree_method'`              | `'exact'`           |
+| `'scale_pos_weight'`         | `1.`                |
+| `'presort'`                  | `'auto'`            |
+| `'init'`                     | `None`              |
+| `'verbose_eval'`             | `False`             |
+| `'random_state'`             | `42`                |
+
 ### `LightGBM`
 
 We fixed the following parameters to be similar of `scikit-learn`.
+
+| Parameters                   | Value              |
+|------------------------------|--------------------|
+| `'boosting'`                 | `'gbdt'`           |
+| `'learning_rate'`            | `0.1`              |
+| `'application'`              | `'binary'`         |
+| `'metric'`                   | `'binary_logloss'` |
+| `'tree_learner'`             | `'serial`'         |
+| `'feature_fraction'`         | `1.`               |
+| `'bagging_fraction'`         | `1.`               |
+| `'bagging_freq'`             | `0`                |
+| `'max_bin'`                  | `255`              |
+| `'is_sparse'`                | `False`            |
+| `'min_gain_to_split`'        | `1`                |
+| `'verbose'`                  | `1`                |
+| `'feature_fraction_seed'`    | `42`               |
+| `'bagging_seed'`             | `42`               |
+| `'data_random_seed'`         | `42`               |
 
 A useful list of alias between parameters is available in [`config.h`](https://github.com/Microsoft/LightGBM/blob/master/include/LightGBM/config.h#L316).
 
