@@ -85,3 +85,16 @@ The following parameters were used to build create the classifier using a grid:
 In the `results` folder, the results of the benchmark have been dumped using `joblib`.
 
 ### Real dataset
+
+
+## Check of tree structure
+
+The file [`check_trees.py`](https://github.com/glemaitre/gbrt-benchmarks/blob/master/check_trees.py)
+is intended to check the structure of a tree created within the gradient
+boosting algorithm.
+
+The parameters are fixed in the python file. The resulting structures are:
+
+* [`sklearn` tree structure](https://github.com/glemaitre/gbrt-benchmarks/blob/master/results/sklearn_tree.png)
+* [`xgboost` tree structure](https://github.com/glemaitre/gbrt-benchmarks/blob/master/results/xgboost_tree.pdf)
+* `LighGBM` tree structure
