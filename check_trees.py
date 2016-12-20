@@ -102,7 +102,7 @@ if __name__ == '__main__':
     N_FEATURES = 1
 
     print(__doc__ + '\n')
-    if not len(sys.argv) == 4:
+    if not len(sys.argv) == 3:
         print(USAGE % __file__)
         sys.exit(-1)
     else:
