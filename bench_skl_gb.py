@@ -59,9 +59,11 @@ if __name__ == '__main__':
     else:
         dataset = sys.argv[1]
         presort = str2bool(sys.argv[2])
-        growth = str2bool(sys.argv[3])
+        growth = sys.argv[3]
         store_dir = sys.argv[4]
         n_try = int(sys.argv[5])
+        print(growth)
+        print(presort)
 
     # Setup the parameters
     params = {}
@@ -76,7 +78,7 @@ if __name__ == '__main__':
     params['min_samples_leaf'] = [MIN_SAMPLES_LEAF]
     params['min_impurity_split'] = [MIN_IMPURITY_SPLIT]
     if growth == 'leaf':
-        params['max_leaf_nodes'] = [np.power(2, MAX_DEPTH)]
+        params['max_leaf_nodes'] = np.power(2, MAX_DEPTH)
     elif growth == 'depth':
         params['max_leaf_nodes'] = [None]
     params['presort'] = [presort]
