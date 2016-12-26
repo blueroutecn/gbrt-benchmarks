@@ -62,8 +62,6 @@ if __name__ == '__main__':
         growth = sys.argv[3]
         store_dir = sys.argv[4]
         n_try = int(sys.argv[5])
-        print(growth)
-        print(presort)
 
     # Setup the parameters
     params = {}
@@ -77,17 +75,21 @@ if __name__ == '__main__':
     params['min_samples_split'] = [2]
     params['min_samples_leaf'] = [MIN_SAMPLES_LEAF]
     params['min_impurity_split'] = [MIN_IMPURITY_SPLIT]
-    if growth == 'leaf':
-        params['max_leaf_nodes'] = np.power(2, MAX_DEPTH)
-    elif growth == 'depth':
-        params['max_leaf_nodes'] = [None]
     params['presort'] = [presort]
     params['init'] = [None]
     params['warm_start'] = [False]
     params['verbose'] = [0]
     params['random_state'] = [RND_SEED]
     params['criterion'] = ['friedman_mse']
+
     params_list = list(ParameterGrid(params))
+    for p_idx in len(params_list):
+        if growth == 'leaf':
+            params_list[p_idx]['max_leaf_nodes'] = np.power(
+                2,
+                params_list[p_idx]['max_depth'])
+        elif growth == 'depth':
+            params_list[p_idx]['max_leaf_nodes'] = None
 
     N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
