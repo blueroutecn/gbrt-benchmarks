@@ -41,13 +41,17 @@ def bench_xgb(X, y, T, valid, **params):
 
 
 if __name__ == '__main__':
-    USAGE = """usage: python %s dataset path_results n_try
+    USAGE = """usage: python %s dataset type path_results n_try
 
     where:
-        - dataset is one of {random}
+        - dataset is one of {'random'}
+        - type is the one of {'approx-local', 'approx-global', 'exact'}
         - path_results is the location to store the results
         - n_try is the number of run
     """
+
+    DATASET_CHOICE = ('random')
+    TYPE_CHOICE = ('exact', 'approx-global', 'approx-local')
 
     N_ESTIMATORS = np.array([1, 1e1], dtype=int)
     LEARNING_RATE = 0.1
@@ -60,6 +64,21 @@ if __name__ == '__main__':
 
     N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
+
+    print(__doc__ + '\n')
+    if not len(sys.argv) == 5:
+        print(USAGE % __file__)
+        sys.exit(-1)
+    else:
+        dataset = sys.argv[1]
+        type_tree = sys.argv[2]
+        store_dir = sys.argv[3]
+        n_try = int(sys.argv[4])
+        # Make a check that the parameters are well defined
+        if type_tree not in TYPE_CHOICE:
+            raise ValueError('Unknown type of tree')
+        if dataset not in DATASET_CHOICE:
+            raise ValueError('Unknown dataset')
 
     # Setup the parameters
     params = {}
@@ -76,21 +95,23 @@ if __name__ == '__main__':
     params['colsample_bylevel'] = [1.]
     params['alpha'] = [0.]
     params['delta'] = [0.]
-    params['tree_method'] = ['exact']
     params['scale_pos_weight'] = [1.]
     params['objective'] = ['binary:logistic']
     params['seed'] = [RND_SEED]
     params['verbose_eval'] = [False]
-    params_list = list(ParameterGrid(params))
 
-    print(__doc__ + '\n')
-    if not len(sys.argv) == 4:
-        print(USAGE % __file__)
-        sys.exit(-1)
-    else:
-        dataset = sys.argv[1]
-        store_dir = sys.argv[2]
-        n_try = int(sys.argv[3])
+    if type_tree == 'exact':
+        params['tree_method'] = ['exact']
+    elif type_tree == 'approx-global':
+        params['tree_method'] = ['approx']
+        params['sketch_eps'] = [1. / 253.]
+        params['updater'] = ['grow_histmaker,prune']
+    elif type_tree == 'approx-local':
+        params['tree_method'] = ['approx']
+        params['sketch_eps'] = [1. / 253.]
+        params['updater'] = ['grow_local_histmaker,prune']
+
+    params_list = list(ParameterGrid(params))
 
     # Create several array for the data
     if dataset == 'random':
@@ -108,7 +129,14 @@ if __name__ == '__main__':
     if not os.path.exists(store_dir):
         os.makedirs(store_dir)
 
-    filename = 'xgboost_' + dataset + '.pk'
+    # Define the name depending of the type of classifier used
+    if type_tree == 'exact':
+        filename = 'xgboost_exact_' + dataset + '.pk'
+    elif type_tree == 'approx-global':
+        filename = 'xgboost_approx_global_' + dataset + '.pk'
+    elif type_tree == 'approx-local':
+        filename = 'xgboost_approx_local_' + dataset + '.pk'
+
     store_filename = os.path.join(store_dir, filename)
 
     joblib.dump(res_xgb, store_filename)

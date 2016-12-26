@@ -12,6 +12,10 @@ from sklearn.model_selection import ParameterGrid
 import misc
 
 
+def str2bool(v):
+    return v.lower() in ("yes", "true", "t", "1")
+
+
 def bench_skl(X, y, T, valid, **params):
     """Execute the gradient boosting pipeline"""
 
@@ -29,10 +33,12 @@ def bench_skl(X, y, T, valid, **params):
 
 
 if __name__ == '__main__':
-    USAGE = """usage: python %s dataset path_results n_try
+    USAGE = """usage: python %s dataset presort growth_style path_results n_try
 
     where:
-        - dataset is one of {random}
+        - dataset is one of {'random'}
+        - presort is one of {True, False}. To presort the data or not.
+        - growth_style is one of {'leaf', 'depth'}.
         - path_results is the location to store the results
         - n_try is the number of run
     """
@@ -46,6 +52,17 @@ if __name__ == '__main__':
     N_THREADS = 1
     RND_SEED = 42
 
+    print(__doc__ + '\n')
+    if not len(sys.argv) == 6:
+        print(USAGE % __file__)
+        sys.exit(-1)
+    else:
+        dataset = sys.argv[1]
+        presort = str2bool(sys.argv[2])
+        growth = str2bool(sys.argv[3])
+        store_dir = sys.argv[4]
+        n_try = int(sys.argv[5])
+
     # Setup the parameters
     params = {}
     params['max_depth'] = MAX_DEPTH
@@ -58,8 +75,11 @@ if __name__ == '__main__':
     params['min_samples_split'] = [2]
     params['min_samples_leaf'] = [MIN_SAMPLES_LEAF]
     params['min_impurity_split'] = [MIN_IMPURITY_SPLIT]
-    params['max_leaf_nodes'] = [None]
-    params['presort'] = ['auto']
+    if growth == 'leaf':
+        params['max_leaf_nodes'] = [np.power(2, MAX_DEPTH)]
+    elif growth == 'depth':
+        params['max_leaf_nodes'] = [None]
+    params['presort'] = [presort]
     params['init'] = [None]
     params['warm_start'] = [False]
     params['verbose'] = [0]
@@ -69,15 +89,6 @@ if __name__ == '__main__':
 
     N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
-
-    print(__doc__ + '\n')
-    if not len(sys.argv) == 4:
-        print(USAGE % __file__)
-        sys.exit(-1)
-    else:
-        dataset = sys.argv[1]
-        store_dir = sys.argv[2]
-        n_try = int(sys.argv[3])
 
     # Create several array for the data
     if dataset == 'random':
@@ -95,7 +106,11 @@ if __name__ == '__main__':
     if not os.path.exists(store_dir):
         os.makedirs(store_dir)
 
-    filename = 'skl_' + dataset + '.pk'
+    if presort:
+        name_presort = '_with_presort_'
+    else:
+        name_presort = '_without_presort_'
+    filename = 'skl_' + growth + name_presort + dataset + '.pk'
     store_filename = os.path.join(store_dir, filename)
 
     joblib.dump(res_skl, store_filename)

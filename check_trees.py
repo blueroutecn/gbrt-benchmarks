@@ -2,6 +2,7 @@ from __future__ import print_function
 import sys
 import os
 
+import json
 import numpy as np
 import xgboost as xgb
 import lightgbm as lgb
@@ -133,6 +134,8 @@ if __name__ == '__main__':
     max_bin = params_lgbm.pop('max_bin')
     lgbm_training = lgb.Dataset(X, label=y, max_bin=max_bin)
     n_est = params_lgbm.pop('n_estimators')
+    # params_lgbm['num_leaves'] = np.power(2, params_lgbm['max_depth'] - 1)
+    params_lgbm['num_leaves'] = 8
     gbm = lgb.train(params_lgbm, lgbm_training, num_boost_round=n_est)
 
     # Export the trees
@@ -151,3 +154,13 @@ if __name__ == '__main__':
     plt.savefig(store_filename,
                 bbox_inches='tight',
                 dpi=2000)
+
+    # lightgbm
+    filename = 'lightgbm_tree.txt'
+    store_filename = os.path.join(store_dir, filename)
+    gbm.save_model(store_filename)
+    model_json = gbm.dump_model()
+    filename = 'lightgbm_tree.json'
+    store_filename = os.path.join(store_dir, filename)
+    with open(store_filename, 'w+') as f:
+        json.dump(model_json, f, indent=4)
