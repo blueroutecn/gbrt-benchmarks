@@ -83,7 +83,7 @@ if __name__ == '__main__':
     params['criterion'] = ['friedman_mse']
 
     params_list = list(ParameterGrid(params))
-    for p_idx in len(params_list):
+    for p_idx in range(len(params_list)):
         if growth == 'leaf':
             params_list[p_idx]['max_leaf_nodes'] = np.power(
                 2,
