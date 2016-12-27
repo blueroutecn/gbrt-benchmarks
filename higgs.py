@@ -12,7 +12,7 @@ Univ. of California Irvine
 
 from gzip import GzipFile
 from io import BytesIO
-import logging
+# import logging
 from os.path import exists, join
 try:
     from urllib2 import urlopen
@@ -30,7 +30,7 @@ from sklearn.utils import check_random_state
 URL = ('https://archive.ics.uci.edu/ml/'
        'machine-learning-databases/00280/HIGGS.csv.gz')
 
-logger = logging.getLogger()
+# logger = logging.getLogger()
 
 
 def fetch_higgs(data_home=None,
@@ -83,7 +83,8 @@ def fetch_higgs(data_home=None,
 
     if download_if_missing and not available:
         makedirs(higgs_dir, exist_ok=True)
-        logger.warning("Downloading %s" % URL)
+        # logger.warning("Downloading %s" % URL)
+        print("Downloading {}".format(URL))
         f = BytesIO(urlopen(URL).read())
         Xy = np.genfromtxt(GzipFile(fileobj=f), delimiter=',')
 
@@ -92,12 +93,14 @@ def fetch_higgs(data_home=None,
 
         joblib.dump(X, samples_path, compress=9)
         joblib.dump(y, targets_path, compress=9)
+        print("Dumped the data")
 
     try:
         X, y
     except NameError:
         X = joblib.load(samples_path)
         y = joblib.load(targets_path)
+        print("Data loaded from pickle")
 
     if shuffle:
         ind = np.arange(X.shape[0])
