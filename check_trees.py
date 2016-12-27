@@ -16,7 +16,6 @@ from sklearn import tree
 
 import misc
 
-
 if __name__ == '__main__':
     USAGE = """usage: python %s dataset path_results
 
@@ -123,12 +122,16 @@ if __name__ == '__main__':
     clf.fit(X, y)
 
     # Fit the xgboost gradient boosting
-    xgb_training = xgb.DMatrix(X, label=y, missing=None, weight=None,
-                               silent=False, feature_names=None,
-                               feature_types=None)
+    xgb_training = xgb.DMatrix(
+        X,
+        label=y,
+        missing=None,
+        weight=None,
+        silent=False,
+        feature_names=None,
+        feature_types=None)
     n_est = params_xgboost.pop('n_estimators')
     bst = xgb.train(params_xgboost, xgb_training, n_est)
-
 
     # Fit the LightGBM gradient boosting
     max_bin = params_lgbm.pop('max_bin')
@@ -151,9 +154,7 @@ if __name__ == '__main__':
     filename = 'xgboost_tree.pdf'
     store_filename = os.path.join(store_dir, filename)
     ax = xgb.plot_tree(bst)
-    plt.savefig(store_filename,
-                bbox_inches='tight',
-                dpi=2000)
+    plt.savefig(store_filename, bbox_inches='tight', dpi=2000)
 
     # lightgbm
     filename = 'lightgbm_tree.txt'

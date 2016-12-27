@@ -36,7 +36,7 @@ if __name__ == '__main__':
     USAGE = """usage: python %s dataset presort growth_style path_results n_try
 
     where:
-        - dataset is one of {'random'}
+        - dataset is one of {'random', 'cover_type'}
         - presort is one of {True, False}. To presort the data or not.
         - growth_style is one of {'leaf', 'depth'}.
         - path_results is the location to store the results
@@ -86,8 +86,7 @@ if __name__ == '__main__':
     for p_idx in range(len(params_list)):
         if growth == 'leaf':
             params_list[p_idx]['max_leaf_nodes'] = np.power(
-                2,
-                params_list[p_idx]['max_depth'])
+                2, params_list[p_idx]['max_depth'])
         elif growth == 'depth':
             params_list[p_idx]['max_leaf_nodes'] = None
 
@@ -96,8 +95,12 @@ if __name__ == '__main__':
 
     # Create several array for the data
     if dataset == 'random':
-        array_data = [misc.generate_samples(ns, nf, RND_SEED)
-                      for ns in N_SAMPLES for nf in N_FEATURES]
+        array_data = [
+            misc.generate_samples(ns, nf, RND_SEED)
+            for ns in N_SAMPLES for nf in N_FEATURES
+        ]
+    elif dataset == 'cover_type':
+        array_data = [misc.load_cover_type(RND_SEED)]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')

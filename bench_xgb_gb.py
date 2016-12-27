@@ -17,14 +17,24 @@ def bench_xgb(X, y, T, valid, **params):
 
     # Create the data matrix
     start_data_t = datetime.now()
-    xgb_training = xgb.DMatrix(X, label=y, missing=None, weight=None,
-                               silent=False, feature_names=None,
-                               feature_types=None)
+    xgb_training = xgb.DMatrix(
+        X,
+        label=y,
+        missing=None,
+        weight=None,
+        silent=False,
+        feature_names=None,
+        feature_types=None)
     end_data_t = datetime.now() - start_data_t
 
-    xgb_testing = xgb.DMatrix(T, label=valid, missing=None, weight=None,
-                              silent=False, feature_names=None,
-                              feature_types=None)
+    xgb_testing = xgb.DMatrix(
+        T,
+        label=valid,
+        missing=None,
+        weight=None,
+        silent=False,
+        feature_names=None,
+        feature_types=None)
 
     n_est = params.pop('n_estimators')
     start_fit_t = datetime.now()
@@ -44,7 +54,7 @@ if __name__ == '__main__':
     USAGE = """usage: python %s dataset type path_results n_try
 
     where:
-        - dataset is one of {'random'}
+        - dataset is one of {'random', 'cover_type'}
         - type is the one of {'approx-local', 'approx-global', 'exact'}
         - path_results is the location to store the results
         - n_try is the number of run
@@ -115,8 +125,12 @@ if __name__ == '__main__':
 
     # Create several array for the data
     if dataset == 'random':
-        array_data = [misc.generate_samples(ns, nf, RND_SEED)
-                      for ns in N_SAMPLES for nf in N_FEATURES]
+        array_data = [
+            misc.generate_samples(ns, nf, RND_SEED)
+            for ns in N_SAMPLES for nf in N_FEATURES
+        ]
+    elif dataset == 'cover_type':
+        array_data = [misc.load_cover_type(RND_SEED)]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')

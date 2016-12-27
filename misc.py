@@ -6,9 +6,21 @@ import numpy as np
 import pandas as pd
 import joblib
 
-
+from sklearn.datasets import fetch_covtype, get_data_home
 from sklearn.model_selection import train_test_split
+from sklearn.externals.joblib import Memory
+from sklearn.utils import check_array
 
+# Memoize the data extraction and memory map the resulting
+# train / test splits in readonly mode
+memory_covertype = Memory(
+    os.path.join(get_data_home(), 'covertype_benchmark_data'), mmap_mode='r')
+
+memory_random = Memory(
+    os.path.join(get_data_home(), 'random_data'), mmap_mode='r')
+
+
+@memory_random
 def generate_samples(n_samples, n_features, random_state):
     """Generate random samples
 
@@ -34,10 +46,54 @@ def generate_samples(n_samples, n_features, random_state):
     data = np.random.randn(n_samples, n_features)
     label = np.random.randint(2, size=n_samples)
 
-    X, T, y, valid = train_test_split(data, label, test_size=.1,
-                                      random_state=random_state)
+    X, T, y, valid = train_test_split(
+        data, label, test_size=.1, random_state=random_state)
 
     return X, y, T, valid
+
+
+@memory_covertype.cache
+def load_cover_type(random_state, dtype=np.float32, order='C'):
+    """Load cover type data
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    X: ndarray, shape (n_train_samples, n_features)
+
+    y: ndarray, shape (n_train_samples, )
+
+    T: ndarray, shape (n_test_samples, n_features)
+
+    valid: ndarray, shape (n_test_samples, )
+    """
+    ######################################################################
+    # Load dataset
+    print("Loading dataset...")
+    data = fetch_covtype(
+        download_if_missing=True, shuffle=True, random_state=random_state)
+    X = check_array(data['data'], dtype=dtype, order=order)
+    y = (data['target'] != 1).astype(np.int)
+
+    # Create train-test split (as [Joachims, 2006])
+    print("Creating train-test split...")
+    n_train = 522911
+    X_train = X[:n_train]
+    y_train = y[:n_train]
+    X_test = X[n_train:]
+    y_test = y[n_train:]
+
+    # Standardize first 10 features (the numerical ones)
+    mean = X_train.mean(axis=0)
+    std = X_train.std(axis=0)
+    mean[10:] = 0.0
+    std[10:] = 1.0
+    X_train = (X_train - mean) / std
+    X_test = (X_test - mean) / std
+
+    return X_train, y_train, X_test, y_test
 
 
 def dtime_to_seconds(dtime):
@@ -134,15 +190,17 @@ def load_benchmark_data(filename, lgbm=False):
 
     # Create the DataFrame
     # Start with the data dictionary
-    d = {'num_samples': num_samples,
-         'num_features': num_features,
-         'max_depth': max_depth,
-         'n_estimators': n_estimators,
-         'avg_fit_time': avg_fit_time,
-         'std_fit_time': std_fit_time,
-         'avg_data_time': avg_data_time,
-         'std_data_time': std_data_time,
-         'avg_score': avg_score,
-         'std_score': std_score}
+    d = {
+        'num_samples': num_samples,
+        'num_features': num_features,
+        'max_depth': max_depth,
+        'n_estimators': n_estimators,
+        'avg_fit_time': avg_fit_time,
+        'std_fit_time': std_fit_time,
+        'avg_data_time': avg_data_time,
+        'std_data_time': std_data_time,
+        'avg_score': avg_score,
+        'std_score': std_score
+    }
 
     return pd.DataFrame(data=d)

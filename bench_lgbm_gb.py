@@ -49,7 +49,7 @@ if __name__ == '__main__':
     USAGE = """usage: python %s dataset path_results n_try
 
     where:
-        - dataset is one of {random}
+        - dataset is one of {'random', 'cover_type'}
         - path_results is the location to store the results
         - n_try is the number of run
     """
@@ -102,14 +102,19 @@ if __name__ == '__main__':
 
     # Create several array for the data
     if dataset == 'random':
-        array_data = [misc.generate_samples(ns, nf, RND_SEED)
-                      for ns in N_SAMPLES for nf in N_FEATURES]
+        array_data = [
+            misc.generate_samples(ns, nf, RND_SEED)
+            for ns in N_SAMPLES for nf in N_FEATURES
+        ]
+    elif dataset == 'cover_type':
+        array_data = [misc.load_cover_type(RND_SEED)]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')
 
     # Save only the time for the moment
-    res_lgbm = [[data[0].shape, p, misc.bench(bench_lgbm, data, n=n_try, **p)]
+    res_lgbm = [[data[0].shape, p, misc.bench(
+        bench_lgbm, data, n=n_try, **p)]
                 for p in params_list for data in array_data]
 
     # Check that the path is existing
