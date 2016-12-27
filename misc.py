@@ -25,7 +25,7 @@ memory_random = Memory(
     os.path.join(get_data_home(), 'random_benchmark_data'), mmap_mode='r')
 
 
-@memory_random
+@memory_random.cache
 def generate_samples(n_samples, n_features, random_state):
     """Generate random samples
 
