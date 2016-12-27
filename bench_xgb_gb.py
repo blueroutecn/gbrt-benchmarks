@@ -54,13 +54,13 @@ if __name__ == '__main__':
     USAGE = """usage: python %s dataset type path_results n_try
 
     where:
-        - dataset is one of {'random', 'cover_type'}
+        - dataset is one of {'random', 'cover_type', 'higgs'}
         - type is the one of {'approx-local', 'approx-global', 'exact'}
         - path_results is the location to store the results
         - n_try is the number of run
     """
 
-    DATASET_CHOICE = ('random')
+    DATASET_CHOICE = ('random', 'cover_type', 'higgs')
     TYPE_CHOICE = ('exact', 'approx-global', 'approx-local')
 
     N_ESTIMATORS = np.array([1, 1e1], dtype=int)
@@ -131,6 +131,8 @@ if __name__ == '__main__':
         ]
     elif dataset == 'cover_type':
         array_data = [misc.load_cover_type(RND_SEED)]
+    elif dataset == 'higgs':
+        array_data = [misc.load_higgs(RND_SEED)]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')

@@ -11,13 +11,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.externals.joblib import Memory
 from sklearn.utils import check_array
 
+from higgs import fetch_higgs
+
 # Memoize the data extraction and memory map the resulting
 # train / test splits in readonly mode
 memory_covertype = Memory(
     os.path.join(get_data_home(), 'covertype_benchmark_data'), mmap_mode='r')
 
+memory_higgs = Memory(
+    os.path.join(get_data_home(), 'higgs_benchmark_data'), mmap_mode='r')
+
 memory_random = Memory(
-    os.path.join(get_data_home(), 'random_data'), mmap_mode='r')
+    os.path.join(get_data_home(), 'random_benchmark_data'), mmap_mode='r')
 
 
 @memory_random
@@ -26,19 +31,19 @@ def generate_samples(n_samples, n_features, random_state):
 
     Parameters
     ----------
-    n_samples: int,
+    n_samples : int,
         The number of samples to generate.
 
-    n_features: int,
+    n_features : int,
         The number of features to generate.
 
     Returns
     -------
-    X: ndarray, shape (n_train_samples, n_features)
+    X : ndarray, shape (n_train_samples, n_features)
 
-    y: ndarray, shape (n_train_samples, )
+    y : ndarray, shape (n_train_samples, )
 
-    T: ndarray, shape (n_test_samples, n_features)
+    T : ndarray, shape (n_test_samples, n_features)
 
     valid: ndarray, shape (n_test_samples, )
     """
@@ -53,19 +58,31 @@ def generate_samples(n_samples, n_features, random_state):
 
 
 @memory_covertype.cache
-def load_cover_type(random_state, dtype=np.float32, order='C'):
+def load_cover_type(random_state=None, dtype=np.float32, order='C'):
     """Load cover type data
 
     Parameters
     ----------
+    random_state : int, np.random.RandomState or None, optional (default=None)
+        The random state used to shuffle the data if needed.
+
+    dtype : np.dtype, optional (default=np.float32)
+        The type for the data to be returned.
+
+    order : 'C', 'F' or None, optional (default='C')
+        Whether an array will be forced to be fortran or c-style.
+        When order is None (default), then if copy=False, nothing is ensured
+        about the memory layout of the output array; otherwise (copy=True)
+        the memory layout of the returned array is kept as close as possible
+        to the original array.
 
     Returns
     -------
-    X: ndarray, shape (n_train_samples, n_features)
+    X : ndarray, shape (n_train_samples, n_features)
 
-    y: ndarray, shape (n_train_samples, )
+    y : ndarray, shape (n_train_samples, )
 
-    T: ndarray, shape (n_test_samples, n_features)
+    T : ndarray, shape (n_test_samples, n_features)
 
     valid: ndarray, shape (n_test_samples, )
     """
@@ -92,6 +109,54 @@ def load_cover_type(random_state, dtype=np.float32, order='C'):
     std[10:] = 1.0
     X_train = (X_train - mean) / std
     X_test = (X_test - mean) / std
+
+    return X_train, y_train, X_test, y_test
+
+
+@memory_higgs.cache
+def load_higgs(random_state=None, dtype=np.float32, order='C'):
+    """Load Higgs data
+
+    Parameters
+    ----------
+    random_state : int, np.random.RandomState or None, optional (default=None)
+        The random state used to shuffle the data if needed.
+
+    dtype : np.dtype, optional (default=np.float32)
+        The type for the data to be returned.
+
+    order : 'C', 'F' or None, optional (default='C')
+        Whether an array will be forced to be fortran or c-style.
+        When order is None (default), then if copy=False, nothing is ensured
+        about the memory layout of the output array; otherwise (copy=True)
+        the memory layout of the returned array is kept as close as possible
+        to the original array.
+
+    Returns
+    -------
+    X : ndarray, shape (n_train_samples, n_features)
+
+    y : ndarray, shape (n_train_samples, )
+
+    T : ndarray, shape (n_test_samples, n_features)
+
+    valid : ndarray, shape (n_test_samples, )
+    """
+    ######################################################################
+    # Load dataset
+    print("Loading dataset...")
+    data = fetch_higgs(
+        download_if_missing=True, shuffle=False, random_state=random_state)
+    X = check_array(data['data'], dtype=dtype, order=order)
+    y = (data['target'] != 1).astype(np.int)
+
+    # Create train-test split (as [Baldi, 2014])
+    print("Creating train-test split...")
+    n_train = 10500000
+    X_train = X[:n_train]
+    y_train = y[:n_train]
+    X_test = X[n_train:]
+    y_test = y[n_train:]
 
     return X_train, y_train, X_test, y_test
 
@@ -126,7 +191,7 @@ def bench(func, data, n=10, **params):
     """
 
     # for the given number of try
-    #assert n > 2
+    # assert n > 2
     score = []
     time_data = []
     time_fit = []

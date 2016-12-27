@@ -36,12 +36,14 @@ if __name__ == '__main__':
     USAGE = """usage: python %s dataset presort growth_style path_results n_try
 
     where:
-        - dataset is one of {'random', 'cover_type'}
+        - dataset is one of {'random', 'cover_type', 'higgs'}
         - presort is one of {True, False}. To presort the data or not.
         - growth_style is one of {'leaf', 'depth'}.
         - path_results is the location to store the results
         - n_try is the number of run
     """
+
+    DATASET_CHOICE = ('random', 'cover_type', 'higgs')
 
     N_ESTIMATORS = np.array([1, 1e1], dtype=int)
     LEARNING_RATE = 0.1
@@ -62,6 +64,9 @@ if __name__ == '__main__':
         growth = sys.argv[3]
         store_dir = sys.argv[4]
         n_try = int(sys.argv[5])
+        if dataset not in DATASET_CHOICE:
+            raise ValueError('Unknown dataset')
+
 
     # Setup the parameters
     params = {}
@@ -101,6 +106,8 @@ if __name__ == '__main__':
         ]
     elif dataset == 'cover_type':
         array_data = [misc.load_cover_type(RND_SEED)]
+    elif dataset == 'higgs':
+        array_data = [misc.load_higgs(RND_SEED)]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')
