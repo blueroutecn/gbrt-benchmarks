@@ -16,15 +16,18 @@ from higgs import fetch_higgs
 # Memoize the data extraction and memory map the resulting
 # train / test splits in readonly mode
 memory_covertype = Memory(
-    os.path.join(get_data_home(), 'covertype_benchmark_data'), mmap_mode='r',
+    os.path.join(get_data_home(), 'covertype_benchmark_data'),
+    mmap_mode='r',
     verbose=10)
 
 memory_higgs = Memory(
-    os.path.join(get_data_home(), 'higgs_benchmark_data'), mmap_mode='r',
+    os.path.join(get_data_home(), 'higgs_benchmark_data'),
+    mmap_mode='r',
     verbose=10)
 
 memory_random = Memory(
-    os.path.join(get_data_home(), 'random_benchmark_data'), mmap_mode='r',
+    os.path.join(get_data_home(), 'random_benchmark_data'),
+    mmap_mode='r',
     verbose=10)
 
 

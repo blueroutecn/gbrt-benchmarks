@@ -104,7 +104,6 @@ if __name__ == '__main__':
         if dataset not in DATASET_CHOICE:
             raise ValueError('Unknown dataset')
 
-
     # Create several array for the data
     if dataset == 'random':
         array_data = [

@@ -27,16 +27,16 @@ from sklearn.utils.fixes import makedirs
 from sklearn.externals import joblib
 from sklearn.utils import check_random_state
 
-
 URL = ('https://archive.ics.uci.edu/ml/'
        'machine-learning-databases/00280/HIGGS.csv.gz')
-
 
 logger = logging.getLogger()
 
 
-def fetch_higgs(data_home=None, download_if_missing=True,
-                random_state=None, shuffle=False):
+def fetch_higgs(data_home=None,
+                download_if_missing=True,
+                random_state=None,
+                shuffle=False):
     """Load the Higgs dataset, downloading it if necessary.
 
     Read more in the :ref:`User Guide <datasets>`.
