@@ -94,7 +94,7 @@ if __name__ == '__main__':
         elif growth == 'depth':
             params_list[p_idx]['max_leaf_nodes'] = None
 
-    N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
+    N_SAMPLES = np.array([1e5, 1e6, 1e7], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
 
     # Create several array for the data
@@ -106,7 +106,9 @@ if __name__ == '__main__':
     elif dataset == 'cover_type':
         array_data = [misc.load_cover_type(RND_SEED)]
     elif dataset == 'higgs':
-        array_data = [misc.load_higgs(RND_SEED)]
+        # We will select some samples from the higgs dataset
+        array_data = [misc.load_higgs(random_state=RND_SEED, n_samples=ns)
+                      for ns in N_SAMPLES]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')
@@ -123,7 +125,7 @@ if __name__ == '__main__':
         name_presort = '_with_presort_'
     else:
         name_presort = '_without_presort_'
-    filename = 'skl_' + growth + name_presort + dataset + '.pk'
+    filename = 'skl_tricked_' + growth + name_presort + dataset + '.pk'
     store_filename = os.path.join(store_dir, filename)
 
     joblib.dump(res_skl, store_filename)

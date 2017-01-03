@@ -72,9 +72,6 @@ if __name__ == '__main__':
     N_THREADS = 1
     RND_SEED = 42
 
-    N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
-    N_FEATURES = np.array([1, 5, 10], dtype=int)
-
     print(__doc__ + '\n')
     if not len(sys.argv) == 5:
         print(USAGE % __file__)
@@ -123,6 +120,9 @@ if __name__ == '__main__':
 
     params_list = list(ParameterGrid(params))
 
+    N_SAMPLES = np.array([1e5, 1e6, 1e7], dtype=int)
+    N_FEATURES = np.array([1, 5, 10], dtype=int)
+
     # Create several array for the data
     if dataset == 'random':
         array_data = [
@@ -132,7 +132,9 @@ if __name__ == '__main__':
     elif dataset == 'cover_type':
         array_data = [misc.load_cover_type(RND_SEED)]
     elif dataset == 'higgs':
-        array_data = [misc.load_higgs(RND_SEED)]
+        # We will select some samples for higgs as well
+        array_data = [misc.load_higgs(random_state=RND_SEED, n_samples=ns)
+                      for ns in N_SAMPLES]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')

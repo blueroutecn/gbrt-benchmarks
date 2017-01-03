@@ -86,9 +86,10 @@ def fetch_higgs(data_home=None,
         # logger.warning("Downloading %s" % URL)
         print("Downloading {}".format(URL))
         f = BytesIO(urlopen(URL).read())
-        Xy = np.genfromtxt(GzipFile(fileobj=f), delimiter=',')
+        Xy = np.genfromtxt(GzipFile(fileobj=f), delimiter=',',
+                           dtype=np.float32)
 
-        X = Xy[:, 1:-1]
+        X = Xy[:, 1::]
         y = Xy[:, 0].astype(np.int32)
 
         joblib.dump(X, samples_path, compress=9)

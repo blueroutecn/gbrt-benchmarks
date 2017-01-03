@@ -9,7 +9,7 @@ import joblib
 from sklearn.datasets import fetch_covtype, get_data_home
 from sklearn.model_selection import train_test_split
 from sklearn.externals.joblib import Memory
-from sklearn.utils import check_array
+from sklearn.utils import check_array, check_random_state
 
 from higgs import fetch_higgs
 
@@ -120,7 +120,8 @@ def load_cover_type(random_state=None, dtype=np.float32, order='C'):
 
 
 @memory_higgs.cache
-def load_higgs(random_state=None, dtype=np.float32, order='C'):
+def load_higgs(random_state=None, dtype=np.float32, order='C',
+               n_samples=None):
     """Load Higgs data
 
     Parameters
@@ -137,6 +138,10 @@ def load_higgs(random_state=None, dtype=np.float32, order='C'):
         about the memory layout of the output array; otherwise (copy=True)
         the memory layout of the returned array is kept as close as possible
         to the original array.
+
+    n_samples : None or int, optional (default=None)
+        The number of samples to select for the training. If None, all the
+        samples will be used.
 
     Returns
     -------
@@ -156,13 +161,22 @@ def load_higgs(random_state=None, dtype=np.float32, order='C'):
     X = check_array(data['data'], dtype=dtype, order=order)
     y = (data['target'] != 1).astype(np.int)
 
+    # Get the random generator
+    rng = check_random_state(random_state)
+
     # Create train-test split (as [Baldi, 2014])
     print("Creating train-test split...")
     n_train = 10500000
-    X_train = X[:n_train]
-    y_train = y[:n_train]
     X_test = X[n_train:]
     y_test = y[n_train:]
+    # Select only the desired number of samples
+    if n_samples is None:
+        idx_training = range(n_train)
+    else:
+        idx_training = rng.choice(n_train, n_samples)
+
+    X_train = X[idx_training]
+    y_train = y[idx_training]
 
     return X_train, y_train, X_test, y_test
 
