@@ -19,17 +19,23 @@ def str2bool(v):
 def bench_skl(X, y, T, valid, **params):
     """Execute the gradient boosting pipeline"""
 
+    # Presort the data
+    start_data_t = datetime.now()
+    X_idx_sorted = np.asfortranarray(np.argsort(X, axis=0),
+                                     dtype=np.int32)
+    end_data_t = datetime.now() - start_data_t
+
     # Create a list of Gradient Boosting
     clf = GradientBoostingClassifier()
     clf.set_params(**params)
 
     start_fit_t = datetime.now()
-    clf.fit(X, y)
+    clf.fit(X, y, X_idx_sorted=X_idx_sorted)
     end_fit_t = datetime.now() - start_fit_t
 
     score = np.mean(clf.predict(T) == valid)
 
-    return score, datetime.now() - datetime.now(), end_fit_t
+    return score, end_data_t, end_fit_t
 
 
 if __name__ == '__main__':

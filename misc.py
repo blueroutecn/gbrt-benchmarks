@@ -221,19 +221,22 @@ def bench(func, data, n=None, **params):
     time_data = []
     time_fit = []
 
+    print('The size of the data is: {}'.format(data[0].shape))
+
     if n is None:
         # Perform the benchmark once and check the time
         sc, t_data, t_fit = func(*data, **params)
         # Compute the time in seconds
-        t_data_sec = dtime_to_seconds(t_data)
+        t_fit_sec = dtime_to_seconds(t_fit)
         # In the meanwhile append the results
         score.append(sc)
         time_data.append(dtime_to_seconds(t_data))
         time_fit.append(dtime_to_seconds(t_fit))
-        if t_data_sec < 1.:
+        print('The fitting time was: {}'.format(t_fit_sec))
+        if t_fit_sec < 1.:
             # Compute how many iteration we need to perform
             print('We gonna to repeat the bench. It was to short')
-            n_iter = np.ceil(1. / t_data_sec).astype(np.int) - 1
+            n_iter = np.ceil(1. / t_fit_sec).astype(np.int) - 1
             print('The number of iterations will be {}'.format(n_iter))
             for i in range(n_iter):
                 sc, t_data, t_fit = func(*data, **params)
