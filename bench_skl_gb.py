@@ -40,7 +40,8 @@ if __name__ == '__main__':
         - presort is one of {True, False}. To presort the data or not.
         - growth_style is one of {'leaf', 'depth'}.
         - path_results is the location to store the results
-        - n_try is the number of run
+        - n_try is either an integer or None. Integer is the number of try
+        the benchmark will be repeated.
     """
 
     DATASET_CHOICE = ('random', 'cover_type', 'higgs')
@@ -63,7 +64,14 @@ if __name__ == '__main__':
         presort = str2bool(sys.argv[2])
         growth = sys.argv[3]
         store_dir = sys.argv[4]
-        n_try = int(sys.argv[5])
+        # Try to perform a conversion to int
+        try:
+            n_try = int(sys.argv[5])
+        except:
+            if sys.argv[5] == 'None':
+                n_try = None
+            else:
+                raise ValueError('Choose None or an integer for n_try')
         if dataset not in DATASET_CHOICE:
             raise ValueError('Unknown dataset')
 
@@ -114,7 +122,7 @@ if __name__ == '__main__':
                          ' random')
 
     # Save only the time for the moment
-    res_skl = [[data[0].shape, p, misc.bench(bench_skl, data, **p)]
+    res_skl = [[data[0].shape, p, misc.bench(bench_skl, data, n=n_try, **p)]
                for p in params_list for data in array_data]
 
     # Check that the path is existing

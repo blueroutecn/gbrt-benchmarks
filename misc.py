@@ -1,6 +1,7 @@
-from __future__ import print_function
+from __future__ import print_function, division
 
 import os
+import numbers
 
 import numpy as np
 import pandas as pd
@@ -185,7 +186,7 @@ def dtime_to_seconds(dtime):
     return dtime.seconds + (dtime.microseconds * 1e-6)
 
 
-def bench(func, data, n=10, **params):
+def bench(func, data, n=None, **params):
     """
     Benchmark a given function. The function is executed n times and
     its output is expected to be of type datetime.datetime.
@@ -194,12 +195,16 @@ def bench(func, data, n=10, **params):
 
     Parameters
     ----------
-    func: function,
+    func : function,
         The function to use for benchmarking.
 
-    data: tuple, shape (4, )
+    data : tuple, shape (4, )
         (X, y, T, valid) containing training (X, y) and validation
         (T, valid) data.
+
+    n : int or None, optional (default=None)
+        The number of time to repeat the benchmark. If `None`, the
+        benchmark is repeated to take more than a second in overall.
 
     params:
         the parameters used in the function `func`.
@@ -215,13 +220,36 @@ def bench(func, data, n=10, **params):
     score = []
     time_data = []
     time_fit = []
-    for i in range(n):
-        sc, t_data, t_fit = func(*data, **params)
 
-        # Append the values
+    if n is None:
+        # Perform the benchmark once and check the time
+        sc, t_data, t_fit = func(*data, **params)
+        # Compute the time in seconds
+        t_data_sec = dtime_to_seconds(t_data)
+        # In the meanwhile append the results
         score.append(sc)
         time_data.append(dtime_to_seconds(t_data))
         time_fit.append(dtime_to_seconds(t_fit))
+        if t_data_sec < 1.:
+            # Compute how many iteration we need to perform
+            n_iter = np.ceil(1. / t_data_sec).astype(np.int) - 1
+            for i in range(n_iter):
+                sc, t_data, t_fit = func(*data, **params)
+
+                # Append the values
+                score.append(sc)
+                time_data.append(dtime_to_seconds(t_data))
+                time_fit.append(dtime_to_seconds(t_fit))
+    elif isinstance(n, numbers.Integral):
+        for i in range(n):
+            sc, t_data, t_fit = func(*data, **params)
+
+            # Append the values
+            score.append(sc)
+            time_data.append(dtime_to_seconds(t_data))
+            time_fit.append(dtime_to_seconds(t_fit))
+    else:
+        raise ValueError('n as to be None or an int.')
 
     return np.array(score), np.array(time_data), np.array(time_fit)
 

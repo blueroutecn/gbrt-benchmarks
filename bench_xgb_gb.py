@@ -57,7 +57,8 @@ if __name__ == '__main__':
         - dataset is one of {'random', 'cover_type', 'higgs'}
         - type is the one of {'approx-local', 'approx-global', 'exact'}
         - path_results is the location to store the results
-        - n_try is the number of run
+        - n_try is either an integer or None. Integer is the number of try
+        the benchmark will be repeated.
     """
 
     DATASET_CHOICE = ('random', 'cover_type', 'higgs')
@@ -80,7 +81,14 @@ if __name__ == '__main__':
         dataset = sys.argv[1]
         type_tree = sys.argv[2]
         store_dir = sys.argv[3]
-        n_try = int(sys.argv[4])
+        # Try to perform a conversion to int
+        try:
+            n_try = int(sys.argv[4])
+        except:
+            if sys.argv[5] == 'None':
+                n_try = None
+            else:
+                raise ValueError('Choose None or an integer for n_try')
         # Make a check that the parameters are well defined
         if type_tree not in TYPE_CHOICE:
             raise ValueError('Unknown type of tree')
@@ -140,7 +148,7 @@ if __name__ == '__main__':
                          ' random')
 
     # Save only the time for the moment
-    res_xgb = [[data[0].shape, p, misc.bench(bench_xgb, data, **p)]
+    res_xgb = [[data[0].shape, p, misc.bench(bench_xgb, data, n=n_try, **p)]
                for p in params_list for data in array_data]
 
     # Check that the path is existing

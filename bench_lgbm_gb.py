@@ -52,6 +52,8 @@ if __name__ == '__main__':
         - dataset is one of {'random', 'cover_type', 'higgs'}
         - path_results is the location to store the results
         - n_try is the number of run
+        - n_try is either an integer or None. Integer is the number of try
+        the benchmark will be repeated.
     """
 
     DATASET_CHOICE = ('random', 'cover_type', 'higgs')
@@ -97,7 +99,14 @@ if __name__ == '__main__':
     else:
         dataset = sys.argv[1]
         store_dir = sys.argv[2]
-        n_try = int(sys.argv[3])
+        # Try to perform a conversion to int
+        try:
+            n_try = int(sys.argv[3])
+        except:
+            if sys.argv[5] == 'None':
+                n_try = None
+            else:
+                raise ValueError('Choose None or an integer for n_try')
         if dataset not in DATASET_CHOICE:
             raise ValueError('Unknown dataset')
 
@@ -115,7 +124,7 @@ if __name__ == '__main__':
     elif dataset == 'higgs':
         # Select a subset of samples
         array_data = [misc.load_higgs(random_state=RND_SEED, n_samples=ns)
-                      for ns in S_SAMPLES]
+                      for ns in N_SAMPLES]
     else:
         raise ValueError('The dataset is not known. The possible choices are:'
                          ' random')
