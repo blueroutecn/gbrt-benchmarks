@@ -139,7 +139,7 @@ if __name__ == '__main__':
         name_presort = '_with_presort_'
     else:
         name_presort = '_without_presort_'
-    filename = 'skl_tricked_' + growth + name_presort + dataset + '.pk'
+    filename = 'skl_' + growth + name_presort + dataset + '.pk'
     store_filename = os.path.join(store_dir, filename)
 
     joblib.dump(res_skl, store_filename)

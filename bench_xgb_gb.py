@@ -85,7 +85,7 @@ if __name__ == '__main__':
         try:
             n_try = int(sys.argv[4])
         except:
-            if sys.argv[5] == 'None':
+            if sys.argv[4] == 'None':
                 n_try = None
             else:
                 raise ValueError('Choose None or an integer for n_try')

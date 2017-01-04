@@ -51,7 +51,6 @@ if __name__ == '__main__':
     where:
         - dataset is one of {'random', 'cover_type', 'higgs'}
         - path_results is the location to store the results
-        - n_try is the number of run
         - n_try is either an integer or None. Integer is the number of try
         the benchmark will be repeated.
     """
@@ -103,14 +102,14 @@ if __name__ == '__main__':
         try:
             n_try = int(sys.argv[3])
         except:
-            if sys.argv[5] == 'None':
+            if sys.argv[3] == 'None':
                 n_try = None
             else:
                 raise ValueError('Choose None or an integer for n_try')
         if dataset not in DATASET_CHOICE:
             raise ValueError('Unknown dataset')
 
-    N_SAMPLES = np.array([10e2, 10e3, 10e4], dtype=int)
+    N_SAMPLES = np.array([1e5, 1e6, 1e7], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
 
     # Create several array for the data
