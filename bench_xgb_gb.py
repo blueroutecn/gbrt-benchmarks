@@ -114,6 +114,7 @@ if __name__ == '__main__':
     params['objective'] = ['binary:logistic']
     params['seed'] = [RND_SEED]
     params['verbose_eval'] = [False]
+    params['cache_opt'] = [False]
 
     if type_tree == 'exact':
         params['tree_method'] = ['exact']
@@ -157,7 +158,7 @@ if __name__ == '__main__':
 
     # Define the name depending of the type of classifier used
     if type_tree == 'exact':
-        filename = 'xgboost_exact_' + dataset + '.pk'
+        filename = 'xgboost_exact_nocache_' + dataset + '.pk'
     elif type_tree == 'approx-global':
         filename = 'xgboost_approx_global_' + dataset + '.pk'
     elif type_tree == 'approx-local':
