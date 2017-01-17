@@ -136,7 +136,7 @@ if __name__ == '__main__':
         os.makedirs(store_dir)
 
     if presort:
-        name_presort = '_with_presort_'
+        name_presort = '_with_presort_subsampling'
     else:
         name_presort = '_without_presort_'
     filename = 'skl_' + growth + name_presort + dataset + '.pk'
