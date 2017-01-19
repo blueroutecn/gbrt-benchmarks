@@ -60,7 +60,8 @@ if __name__ == '__main__':
     SUBSAMPLES = 1.
     N_THREADS = 1
     RND_SEED = 42
-    N_SAMPLES_SPLIT = np.array([1e3, 1e4, 1e5, 1e6], dtype=int)
+    N_SAMPLES_SPLIT = np.array([1e3, 1e4, 1e5, 1e6, 2e6, 5e6, 7e6, 1e7],
+                               dtype=int)
 
     print(__doc__ + '\n')
     if not len(sys.argv) == 6:
@@ -110,7 +111,7 @@ if __name__ == '__main__':
         elif growth == 'depth':
             params_list[p_idx]['max_leaf_nodes'] = None
 
-    N_SAMPLES = np.array([1e5, 1e6, 1e7], dtype=int)
+    N_SAMPLES = np.array([1e7], dtype=int)  # np.array([1e5, 1e6, 1e7], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
 
     # Create several array for the data
