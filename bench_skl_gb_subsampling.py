@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     DATASET_CHOICE = ('random', 'cover_type', 'higgs')
 
-    N_ESTIMATORS = [1e1]  # np.array([1, 1e1], dtype=int)
+    N_ESTIMATORS = [10]  # np.array([1, 1e1], dtype=int)
     LEARNING_RATE = 0.1
     MIN_IMPURITY_SPLIT = 1e-7
     MAX_DEPTH = [8]  # np.array([1, 3, 5, 8], dtype=int)
