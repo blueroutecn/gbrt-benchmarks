@@ -60,8 +60,7 @@ if __name__ == '__main__':
     SUBSAMPLES = 1.
     N_THREADS = 1
     RND_SEED = 42
-    N_SAMPLES_SPLIT = np.array([1e3, 1e4, 1e5, 1e6, 2e6, 5e6, 7e6, 1e7],
-                               dtype=int)
+    N_SAMPLES_SPLIT = np.array([1e3, 1e4, 1e5, 1e6], dtype=int)
 
     print(__doc__ + '\n')
     if not len(sys.argv) == 6:
