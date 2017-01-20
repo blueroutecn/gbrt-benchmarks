@@ -11,7 +11,11 @@ from sklearn.model_selection import ParameterGrid
 
 import misc
 
+# Create a memory to store the results and avoid recomputation
+memory = joblib.Memory(cachedir='results', verbose=10)
 
+
+@memory.cache
 def bench_xgb(X, y, T, valid, **params):
     """Execute the gradient boosting pipeline"""
 
@@ -41,13 +45,17 @@ def bench_xgb(X, y, T, valid, **params):
     bst = xgb.train(params, xgb_training, n_est)
     end_fit_t = datetime.now() - start_fit_t
 
+    pred = bst.predict(xgb_training)
+    pred[np.nonzero(pred >= 0.5)] = 1
+    pred[np.nonzero(pred < 0.5)] = 0
+    score_training = np.mean(pred == y)
+
     pred = bst.predict(xgb_testing)
     pred[np.nonzero(pred >= 0.5)] = 1
     pred[np.nonzero(pred < 0.5)] = 0
+    score_testing = np.mean(pred == valid)
 
-    score = np.mean(pred == valid)
-
-    return score, end_data_t, end_fit_t
+    return score_training, score_testing, end_data_t, end_fit_t
 
 
 if __name__ == '__main__':
