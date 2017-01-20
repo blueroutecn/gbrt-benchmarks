@@ -11,11 +11,15 @@ from sklearn.model_selection import ParameterGrid
 
 import misc
 
+# Create a memory to store the results and avoid recomputation
+memory = joblib.Memory(cachedir='results', verbose=10)
+
 
 def str2bool(v):
     return v.lower() in ("yes", "true", "t", "1")
 
 
+@memory.cache
 def bench_skl(X, y, T, valid, **params):
     """Execute the gradient boosting pipeline"""
 
@@ -33,9 +37,11 @@ def bench_skl(X, y, T, valid, **params):
     clf.fit(X, y, X_idx_sorted=X_idx_sorted)
     end_fit_t = datetime.now() - start_fit_t
 
-    score = np.mean(clf.predict(T) == valid)
+    score_training = np.mean(clf.predict(X) == y)
 
-    return score, end_data_t, end_fit_t
+    score_testing = np.mean(clf.predict(T) == valid)
+
+    return score_training, score_testing, end_data_t, end_fit_t
 
 
 if __name__ == '__main__':
@@ -52,15 +58,15 @@ if __name__ == '__main__':
 
     DATASET_CHOICE = ('random', 'cover_type', 'higgs')
 
-    N_ESTIMATORS = [10]  # np.array([1, 1e1], dtype=int)
+    N_ESTIMATORS = np.array([1, 5, 1e1], dtype=int)
     LEARNING_RATE = 0.1
     MIN_IMPURITY_SPLIT = 1e-7
-    MAX_DEPTH = [8]  # np.array([1, 3, 5, 8], dtype=int)
+    MAX_DEPTH = np.array([1, 3, 5, 8, 10, 15], dtype=int)
     MIN_SAMPLES_LEAF = 1
     SUBSAMPLES = 1.
     N_THREADS = 1
     RND_SEED = 42
-    N_SAMPLES_SPLIT = np.array([1e3, 1e4, 1e5, 1e6, 5e6, 105e5], dtype=int)
+    N_SAMPLES_SPLIT = np.array([1e3, 5e3, 1e4, 5e4, 1e5, 5e5, 1e6], dtype=int)
 
     print(__doc__ + '\n')
     if not len(sys.argv) == 6:
