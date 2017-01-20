@@ -116,7 +116,7 @@ if __name__ == '__main__':
         elif growth == 'depth':
             params_list[p_idx]['max_leaf_nodes'] = None
 
-    N_SAMPLES = np.array([1e7], dtype=int)  # np.array([1e5, 1e6, 1e7], dtype=int)
+    N_SAMPLES = np.array([1e5, 1e6, 1e7], dtype=int)
     N_FEATURES = np.array([1, 5, 10], dtype=int)
 
     # Create several array for the data
