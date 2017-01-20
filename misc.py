@@ -217,7 +217,8 @@ def bench(func, data, n=None, **params):
 
     # for the given number of try
     # assert n > 2
-    score = []
+    score_training = []
+    score_testing = []
     time_data = []
     time_fit = []
 
@@ -225,11 +226,12 @@ def bench(func, data, n=None, **params):
 
     if n is None:
         # Perform the benchmark once and check the time
-        sc, t_data, t_fit = func(*data, **params)
+        sc_tr, sc_te, t_data, t_fit = func(*data, **params)
         # Compute the time in seconds
         t_fit_sec = dtime_to_seconds(t_fit)
         # In the meanwhile append the results
-        score.append(sc)
+        score_training.append(sc_tr)
+        score_testing.append(sc_te)
         time_data.append(dtime_to_seconds(t_data))
         time_fit.append(dtime_to_seconds(t_fit))
         print('The fitting time was: {}'.format(t_fit_sec))
@@ -239,24 +241,27 @@ def bench(func, data, n=None, **params):
             n_iter = np.ceil(1. / t_fit_sec).astype(np.int) - 1
             print('The number of iterations will be {}'.format(n_iter))
             for i in range(n_iter):
-                sc, t_data, t_fit = func(*data, **params)
+                sc_tr, sc_te, t_data, t_fit = func(*data, **params)
 
                 # Append the values
-                score.append(sc)
+                score_training.append(sc_tr)
+                score_testing.append(sc_te)
                 time_data.append(dtime_to_seconds(t_data))
                 time_fit.append(dtime_to_seconds(t_fit))
     elif isinstance(n, numbers.Integral):
         for i in range(n):
-            sc, t_data, t_fit = func(*data, **params)
+            sc_tr, sc_te, t_data, t_fit = func(*data, **params)
 
             # Append the values
-            score.append(sc)
+            score_training.append(sc_tr)
+            score_testing.append(sc_te)
             time_data.append(dtime_to_seconds(t_data))
             time_fit.append(dtime_to_seconds(t_fit))
     else:
         raise ValueError('n as to be None or an int.')
 
-    return np.array(score), np.array(time_data), np.array(time_fit)
+    return (np.array(score_training), np.array(score_testing),
+            np.array(time_data), np.array(time_fit))
 
 
 def load_benchmark_data(filename, lgbm=False):
