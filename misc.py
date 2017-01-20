@@ -289,8 +289,10 @@ def load_benchmark_data(filename, lgbm=False):
     std_fit_time = []
     avg_data_time = []
     std_data_time = []
-    avg_score = []
-    std_score = []
+    avg_score_training = []
+    std_score_training = []
+    avg_score_testing = []
+    std_score_testing = []
     for conf in pickle_data:
         num_samples.append(conf[0][0])
         num_features.append(conf[0][1])
@@ -299,12 +301,14 @@ def load_benchmark_data(filename, lgbm=False):
         else:
             max_depth.append(conf[1]['max_depth'])
         n_estimators.append(conf[1]['n_estimators'])
-        avg_score.append(np.mean(conf[2][0]))
-        std_score.append(np.std(conf[2][0]))
-        avg_data_time.append(np.mean(conf[2][1]))
-        std_data_time.append(np.std(conf[2][1]))
-        avg_fit_time.append(np.mean(conf[2][2]))
-        std_fit_time.append(np.std(conf[2][2]))
+        avg_score_training.append(np.mean(conf[2][0]))
+        std_score_training.append(np.std(conf[2][0]))
+        avg_score_testing.append(np.mean(conf[2][1]))
+        std_score_testing.append(np.std(conf[2][1]))
+        avg_data_time.append(np.mean(conf[2][2]))
+        std_data_time.append(np.std(conf[2][2]))
+        avg_fit_time.append(np.mean(conf[2][3]))
+        std_fit_time.append(np.std(conf[2][3]))
 
     # Create the DataFrame
     # Start with the data dictionary
@@ -317,8 +321,10 @@ def load_benchmark_data(filename, lgbm=False):
         'std_fit_time': std_fit_time,
         'avg_data_time': avg_data_time,
         'std_data_time': std_data_time,
-        'avg_score': avg_score,
-        'std_score': std_score
+        'avg_score_training': avg_score_training,
+        'std_score_training': std_score_training,
+        'avg_score_testing': avg_score_testing,
+        'std_score_testing': std_score_testing
     }
 
     return pd.DataFrame(data=d)
