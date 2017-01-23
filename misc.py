@@ -298,6 +298,7 @@ def load_benchmark_data(filename, lgbm=False):
     std_score_training = []
     avg_score_testing = []
     std_score_testing = []
+    subsampling = []
     for conf in pickle_data:
         num_samples.append(conf[0][0])
         num_features.append(conf[0][1])
@@ -314,22 +315,41 @@ def load_benchmark_data(filename, lgbm=False):
         std_data_time.append(np.std(conf[2][2]))
         avg_fit_time.append(np.mean(conf[2][3]))
         std_fit_time.append(np.std(conf[2][3]))
+        if 'n_samples_split' in conf[1]:
+            subsampling.append(conf[1]['n_samples_split'])
 
     # Create the DataFrame
     # Start with the data dictionary
-    d = {
-        'num_samples': num_samples,
-        'num_features': num_features,
-        'max_depth': max_depth,
-        'n_estimators': n_estimators,
-        'avg_fit_time': avg_fit_time,
-        'std_fit_time': std_fit_time,
-        'avg_data_time': avg_data_time,
-        'std_data_time': std_data_time,
-        'avg_score_training': avg_score_training,
-        'std_score_training': std_score_training,
-        'avg_score_testing': avg_score_testing,
-        'std_score_testing': std_score_testing
-    }
+    if not subsampling:
+        d = {
+            'num_samples': num_samples,
+            'num_features': num_features,
+            'max_depth': max_depth,
+            'n_estimators': n_estimators,
+            'avg_fit_time': avg_fit_time,
+            'std_fit_time': std_fit_time,
+            'avg_data_time': avg_data_time,
+            'std_data_time': std_data_time,
+            'avg_score_training': avg_score_training,
+            'std_score_training': std_score_training,
+            'avg_score_testing': avg_score_testing,
+            'std_score_testing': std_score_testing
+        }
+    else:
+        d = {
+            'num_samples': num_samples,
+            'num_features': num_features,
+            'max_depth': max_depth,
+            'n_estimators': n_estimators,
+            'avg_fit_time': avg_fit_time,
+            'std_fit_time': std_fit_time,
+            'avg_data_time': avg_data_time,
+            'std_data_time': std_data_time,
+            'avg_score_training': avg_score_training,
+            'std_score_training': std_score_training,
+            'avg_score_testing': avg_score_testing,
+            'std_score_testing': std_score_testing,
+            'subsampling': subsampling
+        }
 
     return pd.DataFrame(data=d)
