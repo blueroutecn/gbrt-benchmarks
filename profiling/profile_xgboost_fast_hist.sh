@@ -1,1 +1,1 @@
-python -m yep -c xgboost_fast_hist.py
+python -m yep -c --lines xgboost_fast_hist.py
