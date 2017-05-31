@@ -25,7 +25,13 @@ git clone https://github.com/dmlc/xgboost.git
 cd xgboost
 git submodule init
 git submodule update
-make
+cp make/config.mk .
+```
+
+Edit `config.mk` and turn edit `TEST_COVER=1` to activate the debug mode.
+
+```
+make -j
 cd python-package
 python setup.py install
 ```
@@ -37,8 +43,13 @@ git clone https://github.com/Microsoft/LightGBM.git
 cd LightGBM
 mkdir build
 cd build
-cmake ../
-make
+ccmake ../
+```
+
+Activate the `Debug` mode instead of Release.
+
+```
+make -j
 cd ../python-package
 python setup.py install
 ```
