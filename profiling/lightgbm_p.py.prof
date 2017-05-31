@@ -1,0 +1,5985 @@
+events: Hits
+
+fl=(1) /build/glibc-9tT8Do/glibc-2.23/dlfcn/dlerror.c
+fn=(1) _dlerror_run
+cfl=(2) /build/glibc-9tT8Do/glibc-2.23/elf/dl-error.c
+cfn=(2) _dl_catch_error
+calls=3 187
+163 3
+
+fl=(3) /build/glibc-9tT8Do/glibc-2.23/dlfcn/dlopen.c
+fn=(3) dlopen_doit
+cfl=(4) /build/glibc-9tT8Do/glibc-2.23/elf/dl-open.c
+cfn=(4) _dl_open
+calls=3 660
+66 3
+
+fl=(3)
+fn=(5) __dlopen
+cfl=(1)
+cfn=(1)
+calls=3 163
+87 3
+
+fl=(5) /build/glibc-9tT8Do/glibc-2.23/elf/../sysdeps/x86_64/dl-machine.h
+fn=(6) elf_machine_rela
+cfl=(6) /build/glibc-9tT8Do/glibc-2.23/elf/dl-lookup.c
+cfn=(7) _dl_lookup_symbol_x
+calls=1 829
+301 1
+
+fl=(5)
+fn=(6)
+cfl=(6)
+cfn=(8) dl_new_hash
+calls=1 568
+301 1
+
+fl=(2)
+fn=(2)
+cfl=(4)
+cfn=(9) dl_open_worker
+calls=1 237
+187 1
+
+fl=(2)
+fn=(2)
+cfl=(4)
+cfn=(9)
+calls=2 435
+187 2
+
+fl=(2)
+fn=(2)
+cfl=(3)
+cfn=(3)
+calls=3 66
+187 3
+
+fl=(7) /build/glibc-9tT8Do/glibc-2.23/elf/dl-load.c
+fn=(10) open_verify.constprop.7
+cfl=(8) /build/glibc-9tT8Do/glibc-2.23/io/../sysdeps/unix/syscall-template.S
+cfn=(11) __GI___open64
+calls=1 84
+1765 1
+
+fl=(7)
+fn=(12) _dl_map_object
+cfl=(7)
+cfn=(10)
+calls=1 1765
+2414 1
+
+fl=(6)
+fn=(13) do_lookup_x
+420 1
+
+fl=(6)
+fn=(8)
+568 1
+
+fl=(6)
+fn=(7)
+cfl=(6)
+cfn=(13)
+calls=1 420
+829 1
+
+fl=(4)
+fn=(9)
+cfl=(7)
+cfn=(12)
+calls=1 2414
+237 1
+
+fl=(4)
+fn=(9)
+cfl=(5)
+cfn=(6)
+calls=2 301
+435 2
+
+fl=(4)
+fn=(4)
+cfl=(2)
+cfn=(2)
+calls=3 187
+660 3
+
+fl=(8)
+fn=(11)
+84 1
+
+fl=(9) /build/glibc-9tT8Do/glibc-2.23/malloc/malloc.c
+fn=(14) __GI___libc_malloc
+2900 1
+
+fl=(9)
+fn=(14)
+2909 4
+
+fl=(9)
+fn=(14)
+cfl=(9)
+cfn=(15) _int_malloc
+calls=3 3817
+2911 3
+
+fl=(9)
+fn=(14)
+cfl=(9)
+cfn=(15)
+calls=3 3518
+2911 3
+
+fl=(9)
+fn=(14)
+cfl=(9)
+cfn=(15)
+calls=1 3831
+2911 1
+
+fl=(9)
+fn=(14)
+cfl=(9)
+cfn=(15)
+calls=2 3317
+2911 2
+
+fl=(9)
+fn=(14)
+2911 1
+
+fl=(9)
+fn=(14)
+2914 1
+
+fl=(9)
+fn=(14)
+2924 1
+
+fl=(9)
+fn=(14)
+2927 1
+
+fl=(9)
+fn=(16) __GI___libc_free
+2932 2
+
+fl=(9)
+fn=(16)
+2938 8
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17) _int_free
+calls=1 4093
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=1 3974
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=2 4032
+2966 2
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=2 3960
+2966 2
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=1 4011
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=1 4006
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=2 3839
+2966 2
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=1 3858
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=1 4024
+2966 1
+
+fl=(9)
+fn=(16)
+cfl=(9)
+cfn=(17)
+calls=2 3982
+2966 2
+
+fl=(9)
+fn=(16)
+2966 1
+
+fl=(9)
+fn=(16)
+2967 3
+
+fl=(9)
+fn=(15)
+3317 2
+
+fl=(9)
+fn=(15)
+3518 3
+
+fl=(9)
+fn=(15)
+3817 3
+
+fl=(9)
+fn=(15)
+3831 1
+
+fl=(9)
+fn=(17)
+3839 2
+
+fl=(9)
+fn=(17)
+3858 1
+
+fl=(9)
+fn=(17)
+3960 2
+
+fl=(9)
+fn=(17)
+3974 1
+
+fl=(9)
+fn=(17)
+3982 2
+
+fl=(9)
+fn=(17)
+4006 1
+
+fl=(9)
+fn=(17)
+4011 1
+
+fl=(9)
+fn=(17)
+4024 1
+
+fl=(9)
+fn=(17)
+4032 2
+
+fl=(9)
+fn=(17)
+4093 1
+
+fl=(10) /build/glibc-9tT8Do/glibc-2.23/math/../sysdeps/i386/fpu/fenv_private.h
+fn=(18) libc_feholdsetround_sse_ctx[inline]
+433 1
+
+fl=(11) /build/glibc-9tT8Do/glibc-2.23/math/../sysdeps/ieee754/dbl-64/e_exp.c
+fn=(19) __ieee754_exp_avx
+cfl=(10)
+cfn=(18)
+calls=1 433
+63 1
+
+fl=(11)
+fn=(19)
+67 2
+
+fl=(11)
+fn=(19)
+111 2
+
+fl=(12) /build/glibc-9tT8Do/glibc-2.23/math/../sysdeps/ieee754/dbl-64/w_exp.c
+fn=(20) __GI___exp
+cfl=(11)
+cfn=(19)
+calls=2 111
+26 2
+
+fl=(12)
+fn=(20)
+cfl=(11)
+cfn=(19)
+calls=1 63
+26 1
+
+fl=(12)
+fn=(20)
+cfl=(11)
+cfn=(19)
+calls=2 67
+26 2
+
+fl=(13) /build/glibc-9tT8Do/glibc-2.23/misc/../sysdeps/unix/sysv/linux/wordsize-64/mmap.c
+fn=(21) __mmap64
+34 1
+
+fl=(14) /build/glibc-9tT8Do/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-avx-unaligned.S
+fn=(22) __memmove_avx_unaligned
+41 1
+
+fl=(14)
+fn=(22)
+238 3
+
+fl=(14)
+fn=(23) __memcpy_avx_unaligned
+264 1
+
+fl=(14)
+fn=(23)
+265 1
+
+fl=(15) /build/glibc-9tT8Do/glibc-2.23/string/../sysdeps/x86_64/multiarch/memset-avx2.S
+fn=(24) __memset_avx2
+49 1
+
+fl=(15)
+fn=(24)
+53 1
+
+fl=(15)
+fn=(24)
+161 26
+
+fl=(16) /home/glemaitre/Documents/work/code/toolbox/LightGBM/include/LightGBM/bin.h
+fn=(25) LightGBM::BinMapper::ValueToBin[inline]
+420 309
+
+fl=(16)
+fn=(25)
+422 54
+
+fl=(16)
+fn=(25)
+423 9
+
+fl=(16)
+fn=(25)
+424 181
+
+fl=(16)
+fn=(25)
+425 486
+
+fl=(16)
+fn=(25)
+426 786
+
+fl=(16)
+fn=(25)
+429 122
+
+fl=(17) /home/glemaitre/Documents/work/code/toolbox/LightGBM/include/LightGBM/dataset.h
+fn=(26) LightGBM::Dataset::PushOneRow[inline]
+317 1
+
+fl=(17)
+fn=(26)
+cfl=(18) /usr/include/c++/5/bits/stl_vector.h
+cfn=(27) std::vector::size[inline]
+calls=1 655
+318 1
+
+fl=(17)
+fn=(26)
+318 23
+
+fl=(17)
+fn=(26)
+319 3
+
+fl=(17)
+fn=(26)
+320 4
+
+fl=(17)
+fn=(26)
+321 3
+
+fl=(17)
+fn=(26)
+322 14
+
+fl=(17)
+fn=(26)
+cfl=(19) /home/glemaitre/Documents/work/code/toolbox/LightGBM/include/LightGBM/feature_group.h
+cfn=(28) LightGBM::FeatureGroup::PushData[inline]
+calls=58 130
+323 58
+
+fl=(17)
+fn=(26)
+cfl=(20) /usr/include/c++/5/bits/unique_ptr.h
+cfn=(29) std::unique_ptr::operator->[inline]
+calls=14 299
+323 14
+
+fl=(17)
+fn=(26)
+cfl=(19)
+cfn=(28)
+calls=1947 129
+323 1947
+
+fl=(17)
+fn=(26)
+cfl=(19)
+cfn=(28)
+calls=70 133
+323 70
+
+fl=(17)
+fn=(26)
+323 2
+
+fl=(17)
+fn=(26)
+cfl=(19)
+cfn=(28)
+calls=11 131
+323 11
+
+fl=(17)
+fn=(26)
+cfl=(19)
+cfn=(28)
+calls=142 135
+323 142
+
+fl=(17)
+fn=(30) LightGBM::Dataset::Split[inline]
+cfl=(19)
+cfn=(31) LightGBM::FeatureGroup::Split[inline]
+calls=39 172
+410 39
+
+fl=(19)
+fn=(32) LightGBM::FeatureGroup::FeatureGroup[inline]
+cfl=(21) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/bin.cpp
+cfn=(33) LightGBM::Bin::CreateDenseBin
+calls=1 407
+49 1
+
+fl=(19)
+fn=(32)
+cfl=(21)
+cfn=(33)
+calls=9 413
+49 9
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=181 424
+129 181
+
+fl=(19)
+fn=(28)
+cfl=(20)
+cfn=(29)
+calls=98 299
+129 98
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=309 420
+129 309
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=786 426
+129 786
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=9 423
+129 9
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=122 429
+129 122
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=486 425
+129 486
+
+fl=(19)
+fn=(28)
+cfl=(16)
+cfn=(25)
+calls=54 422
+129 54
+
+fl=(19)
+fn=(28)
+130 58
+
+fl=(19)
+fn=(28)
+131 11
+
+fl=(19)
+fn=(28)
+133 70
+
+fl=(19)
+fn=(28)
+cfl=(22) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/dense_nbits_bin.hpp
+cfn=(34) LightGBM::Dense4bitsBin::Push
+calls=4 50
+135 4
+
+fl=(19)
+fn=(28)
+cfl=(22)
+cfn=(34)
+calls=1 61
+135 1
+
+fl=(19)
+fn=(28)
+cfl=(22)
+cfn=(34)
+calls=2 63
+135 2
+
+fl=(19)
+fn=(28)
+cfl=(20)
+cfn=(29)
+calls=7 299
+135 7
+
+fl=(19)
+fn=(28)
+cfl=(22)
+cfn=(34)
+calls=3 60
+135 3
+
+fl=(19)
+fn=(28)
+cfl=(23) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/dense_bin.hpp
+cfn=(35) LightGBM::DenseBin::Push
+calls=72 54
+135 72
+
+fl=(19)
+fn=(28)
+cfl=(22)
+cfn=(34)
+calls=4 68
+135 4
+
+fl=(19)
+fn=(28)
+135 56
+
+fl=(19)
+fn=(31)
+cfl=(23)
+cfn=(36) LightGBM::DenseBin::Split
+calls=1 213
+172 1
+
+fl=(19)
+fn=(31)
+cfl=(23)
+cfn=(36)
+calls=20 215
+172 20
+
+fl=(19)
+fn=(31)
+cfl=(23)
+cfn=(36)
+calls=5 220
+172 5
+
+fl=(19)
+fn=(31)
+cfl=(23)
+cfn=(36)
+calls=12 218
+172 12
+
+fl=(19)
+fn=(31)
+cfl=(23)
+cfn=(36)
+calls=1 212
+172 1
+
+fl=(24) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/boosting/gbdt.cpp
+fn=(37) LightGBM::GBDT::ResetTrainingData
+cfl=(25) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/treelearner/serial_tree_learner.cpp
+cfn=(38) LightGBM::SerialTreeLearner::Init
+calls=3 79
+98 3
+
+fl=(24)
+fn=(37)
+cfl=(25)
+cfn=(38)
+calls=1 83
+98 1
+
+fl=(24)
+fn=(37)
+cfl=(25)
+cfn=(38)
+calls=1 60
+98 1
+
+fl=(24)
+fn=(37)
+cfl=(25)
+cfn=(38)
+calls=2 82
+98 2
+
+fl=(24)
+fn=(37)
+cfl=(26) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/boosting/score_updater.hpp
+cfn=(39) LightGBM::ScoreUpdater::ScoreUpdater[inline]
+calls=1 28
+108 1
+
+fl=(24)
+fn=(37)
+cfl=(26)
+cfn=(39)
+calls=2 26
+108 2
+
+fl=(24)
+fn=(37)
+cfl=(18)
+cfn=(40) std::vector::resize[inline]
+calls=2 676
+120 2
+
+fl=(24)
+fn=(37)
+191 1
+
+fl=(24)
+fn=(41) LightGBM::GBDT::TrainOneIter
+cfl=(24)
+cfn=(42) LightGBM::GBDT::Boosting
+calls=12 663
+369 12
+
+fl=(24)
+fn=(41)
+cfl=(25)
+cfn=(43) LightGBM::SerialTreeLearner::Train
+calls=472 198
+416 472
+
+fl=(24)
+fn=(41)
+cfl=(25)
+cfn=(43)
+calls=41 215
+416 41
+
+fl=(24)
+fn=(41)
+cfl=(25)
+cfn=(43)
+calls=2 176
+416 2
+
+fl=(24)
+fn=(41)
+cfl=(24)
+cfn=(44) LightGBM::GBDT::UpdateScore
+calls=10 509
+428 10
+
+fl=(24)
+fn=(44)
+cfl=(26)
+cfn=(45) LightGBM::ScoreUpdater::AddScore[inline]
+calls=10 78
+509 10
+
+fl=(24)
+fn=(42)
+cfl=(27) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/objective/binary_objective.hpp
+cfn=(46) LightGBM::BinaryLogloss::GetGradients
+calls=12 113
+663 12
+
+fl=(26)
+fn=(39)
+cfl=(18)
+cfn=(40)
+calls=2 676
+26 2
+
+fl=(26)
+fn=(39)
+cfl=??
+cfn=(47) unknown
+calls=1 0
+28 1
+
+fl=(26)
+fn=(45)
+cfl=(28) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/treelearner/serial_tree_learner.h
+cfn=(48) LightGBM::SerialTreeLearner::AddPredictionToScore
+calls=10 55
+78 10
+
+fl=(29) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/c_api.cpp
+fn=(49) LightGBM::Booster::Booster[inline]
+cfl=(29)
+cfn=(50) LightGBM::Booster::ResetTrainingData
+calls=13 95
+57 13
+
+fl=(29)
+fn=(49)
+cfl=(29)
+cfn=(50)
+calls=8 80
+57 8
+
+fl=(29)
+fn=(50)
+cfl=(27)
+cfn=(51) LightGBM::BinaryLogloss::Init
+calls=8 48
+80 8
+
+fl=(29)
+fn=(50)
+cfl=(24)
+cfn=(37)
+calls=1 191
+95 1
+
+fl=(29)
+fn=(50)
+cfl=(24)
+cfn=(37)
+calls=7 98
+95 7
+
+fl=(29)
+fn=(50)
+cfl=(24)
+cfn=(37)
+calls=3 108
+95 3
+
+fl=(29)
+fn=(50)
+cfl=(24)
+cfn=(37)
+calls=2 120
+95 2
+
+fl=(29)
+fn=(52) LightGBM::Booster::TrainOneIter[inline]
+cfl=(24)
+cfn=(41)
+calls=515 416
+150 515
+
+fl=(29)
+fn=(52)
+cfl=(24)
+cfn=(41)
+calls=12 369
+150 12
+
+fl=(29)
+fn=(52)
+cfl=(24)
+cfn=(41)
+calls=10 428
+150 10
+
+fl=(29)
+fn=(53) LGBM_DatasetCreateFromMat
+cfl=??
+cfn=(54) omp_set_num_threads@@VERSION
+calls=1 0
+445 1
+
+fl=(29)
+fn=(53)
+cfl=(30) /usr/include/c++/5/functional
+cfn=(55) std::function::operator[inline]
+calls=9 2267
+459 9
+
+fl=(29)
+fn=(53)
+cfl=(31) /usr/include/c++/5/bits/vector.tcc
+cfn=(56) std::vector::emplace_back[inline]
+calls=3 101
+462 3
+
+fl=(29)
+fn=(53)
+cfl=(31)
+cfn=(56)
+calls=1 96
+462 1
+
+fl=(29)
+fn=(53)
+cfl=(31)
+cfn=(56)
+calls=2 98
+462 2
+
+fl=(29)
+fn=(53)
+cfl=(18)
+cfn=(57) std::vector::operator[][inline]
+calls=1 780
+462 1
+
+fl=(29)
+fn=(53)
+cfl=(18)
+cfn=(57)
+calls=1 780
+463 1
+
+fl=(29)
+fn=(53)
+cfl=(31)
+cfn=(56)
+calls=3 98
+463 3
+
+fl=(29)
+fn=(53)
+cfl=(32) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/dataset_loader.cpp
+cfn=(58) LightGBM::DatasetLoader::CostructFromSampleData
+calls=51 494
+468 51
+
+fl=(29)
+fn=(53)
+cfl=(32)
+cfn=(58)
+calls=12 512
+468 12
+
+fl=(29)
+fn=(53)
+cfl=(32)
+cfn=(58)
+calls=2 511
+468 2
+
+fl=(29)
+fn=(59) LGBM_DatasetCreateFromMat._omp_fn.2
+cfl=(30)
+cfn=(55)
+calls=13 2267
+483 13
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=3 321
+484 3
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=14 322
+484 14
+
+fl=(29)
+fn=(59)
+cfl=(20)
+cfn=(29)
+calls=1 299
+484 1
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=24 318
+484 24
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=1 317
+484 1
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=283 323
+484 283
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=3 319
+484 3
+
+fl=(29)
+fn=(59)
+cfl=(17)
+cfn=(26)
+calls=4 320
+484 4
+
+fl=(29)
+fn=(53)
+cfl=(33) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/dataset.cpp
+cfn=(60) LightGBM::Dataset::FinishLoad
+calls=2 293
+488 2
+
+fl=(29)
+fn=(61) LGBM_DatasetSetField
+cfl=(33)
+cfn=(62) LightGBM::Dataset::SetFloatField
+calls=2 419
+716 2
+
+fl=(29)
+fn=(63) LGBM_BoosterCreate
+cfl=(29)
+cfn=(49)
+calls=21 57
+772 21
+
+fl=(29)
+fn=(64) LGBM_BoosterUpdateOneIter
+cfl=(29)
+cfn=(52)
+calls=537 150
+850 537
+
+fl=(29)
+fn=(65) operator[inline]
+cfl=(18)
+cfn=(66) std::vector::vector[inline]
+calls=3 278
+1112 3
+
+fl=(29)
+fn=(65)
+1115 22
+
+fl=(21)
+fn=(67) LightGBM::GreedyFindBin
+cfl=(34) /usr/include/c++/5/bits/stl_bvector.h
+cfn=(68) std::_Bit_reference::operator=[inline]
+calls=1 87
+94 1
+
+fl=(21)
+fn=(69) LightGBM::BinMapper::FindBin
+cfl=(35) /usr/include/c++/5/bits/stl_algo.h
+cfn=(70) std::sort[inline]
+calls=49 4698
+146 49
+
+fl=(21)
+fn=(69)
+cfl=(21)
+cfn=(67)
+calls=1 94
+221 1
+
+fl=(21)
+fn=(69)
+cfl=(18)
+cfn=(57)
+calls=1 780
+236 1
+
+fl=(21)
+fn=(33)
+cfl=(22)
+cfn=(71) LightGBM::Dense4bitsBin::Dense4bitsBin[inline]
+calls=1 43
+407 1
+
+fl=(21)
+fn=(33)
+cfl=(23)
+cfn=(72) LightGBM::DenseBin::DenseBin[inline]
+calls=9 47
+413 9
+
+fl=(33)
+fn=(73) LightGBM::Dataset::Dataset
+cfl=(36) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/io/metadata.cpp
+cfn=(74) LightGBM::Metadata::Init
+calls=2 34
+29 2
+
+fl=(33)
+fn=(75) LightGBM::MarkUsed
+59 2
+
+fl=(33)
+fn=(76) LightGBM::FindGroups
+cfl=(33)
+cfn=(75)
+calls=2 59
+126 2
+
+fl=(33)
+fn=(77) LightGBM::FastFeatureBundling
+cfl=(33)
+cfn=(76)
+calls=1 126
+172 1
+
+fl=(33)
+fn=(77)
+cfl=(33)
+cfn=(76)
+calls=1 126
+173 1
+
+fl=(33)
+fn=(78) LightGBM::Dataset::Construct
+cfl=(33)
+cfn=(77)
+calls=1 172
+230 1
+
+fl=(33)
+fn=(78)
+cfl=(33)
+cfn=(77)
+calls=1 173
+230 1
+
+fl=(33)
+fn=(78)
+cfl=(19)
+cfn=(32)
+calls=10 49
+263 10
+
+fl=(33)
+fn=(60)
+cfl=??
+cfn=(47)
+calls=2 0
+293 2
+
+fl=(33)
+fn=(60)
+296 2
+
+fl=(33)
+fn=(62)
+cfl=(36)
+cfn=(79) LightGBM::Metadata::SetLabel
+calls=2 314
+419 2
+
+fl=(33)
+fn=(80) LightGBM::Dataset::ConstructHistograms
+cfl=??
+cfn=(47)
+calls=37 0
+591 37
+
+fl=(33)
+fn=(80)
+593 18
+
+fl=(33)
+fn=(80)
+594 19
+
+fl=(33)
+fn=(80)
+cfl=??
+cfn=(47)
+calls=389 0
+606 389
+
+fl=(33)
+fn=(80)
+622 1
+
+fl=(33)
+fn=(80)
+624 1
+
+fl=(33)
+fn=(80)
+631 11
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 8
+
+fl=(33)
+fn=(80)
+631 75
+
+fl=(33)
+fn=(80)
+631 9
+
+fl=(33)
+fn=(80)
+631 73
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 7
+
+fl=(33)
+fn=(80)
+631 2
+
+fl=(33)
+fn=(80)
+631 59
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 61
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 2
+
+fl=(33)
+fn=(80)
+631 13
+
+fl=(33)
+fn=(80)
+631 8
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 1
+
+fl=(33)
+fn=(80)
+631 4
+
+fl=(33)
+fn=(80)
+631 7
+
+fl=(33)
+fn=(80)
+631 20
+
+fl=(33)
+fn=(80)
+cfl=??
+cfn=(47)
+calls=45 0
+686 45
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 4
+
+fl=(33)
+fn=(80)
+710 3
+
+fl=(33)
+fn=(80)
+710 6
+
+fl=(33)
+fn=(80)
+710 3
+
+fl=(33)
+fn=(80)
+710 2
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 2
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 5
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(33)
+fn=(80)
+710 4
+
+fl=(33)
+fn=(80)
+710 6
+
+fl=(33)
+fn=(80)
+710 2
+
+fl=(33)
+fn=(80)
+710 1
+
+fl=(32)
+fn=(58)
+cfl=??
+cfn=(47)
+calls=51 0
+494 51
+
+fl=(32)
+fn=(58)
+507 1
+
+fl=(32)
+fn=(58)
+507 1
+
+fl=(32)
+fn=(58)
+507 49
+
+fl=(32)
+fn=(58)
+cfl=(33)
+cfn=(73)
+calls=2 29
+511 2
+
+fl=(32)
+fn=(58)
+cfl=(33)
+cfn=(78)
+calls=10 263
+512 10
+
+fl=(32)
+fn=(58)
+cfl=(33)
+cfn=(78)
+calls=2 230
+512 2
+
+fl=(23)
+fn=(72)
+cfl=(18)
+cfn=(66)
+calls=9 291
+47 9
+
+fl=(23)
+fn=(35)
+54 72
+
+fl=(23)
+fn=(81) LightGBM::DenseBin::ConstructHistogram
+73 75
+
+fl=(23)
+fn=(81)
+74 4
+
+fl=(23)
+fn=(81)
+75 61
+
+fl=(23)
+fn=(81)
+77 59
+
+fl=(23)
+fn=(81)
+78 13
+
+fl=(23)
+fn=(81)
+79 73
+
+fl=(23)
+fn=(81)
+80 20
+
+fl=(23)
+fn=(81)
+82 7
+
+fl=(23)
+fn=(81)
+83 7
+
+fl=(23)
+fn=(81)
+84 4
+
+fl=(23)
+fn=(81)
+85 8
+
+fl=(23)
+fn=(81)
+88 1
+
+fl=(23)
+fn=(81)
+90 2
+
+fl=(23)
+fn=(81)
+105 3
+
+fl=(23)
+fn=(81)
+108 1
+
+fl=(23)
+fn=(81)
+111 6
+
+fl=(23)
+fn=(81)
+112 6
+
+fl=(23)
+fn=(81)
+113 5
+
+fl=(23)
+fn=(81)
+114 4
+
+fl=(23)
+fn=(81)
+116 4
+
+fl=(23)
+fn=(81)
+117 3
+
+fl=(23)
+fn=(81)
+118 1
+
+fl=(23)
+fn=(81)
+119 1
+
+fl=(23)
+fn=(81)
+121 1
+
+fl=(23)
+fn=(81)
+122 2
+
+fl=(23)
+fn=(36)
+212 1
+
+fl=(23)
+fn=(36)
+213 1
+
+fl=(23)
+fn=(36)
+215 20
+
+fl=(23)
+fn=(36)
+218 12
+
+fl=(23)
+fn=(36)
+220 5
+
+fl=(22)
+fn=(71)
+cfl=(18)
+cfn=(66)
+calls=1 292
+43 1
+
+fl=(22)
+fn=(34)
+50 4
+
+fl=(22)
+fn=(34)
+60 3
+
+fl=(22)
+fn=(34)
+61 1
+
+fl=(22)
+fn=(34)
+63 2
+
+fl=(22)
+fn=(34)
+68 4
+
+fl=(22)
+fn=(82) LightGBM::Dense4bitsBin::ConstructHistogram
+86 1
+
+fl=(22)
+fn=(82)
+88 1
+
+fl=(22)
+fn=(82)
+89 1
+
+fl=(22)
+fn=(82)
+92 11
+
+fl=(22)
+fn=(82)
+94 2
+
+fl=(22)
+fn=(82)
+95 9
+
+fl=(22)
+fn=(82)
+98 4
+
+fl=(22)
+fn=(82)
+100 8
+
+fl=(22)
+fn=(82)
+101 4
+
+fl=(22)
+fn=(82)
+102 4
+
+fl=(22)
+fn=(82)
+103 4
+
+fl=(22)
+fn=(82)
+105 1
+
+fl=(22)
+fn=(82)
+108 1
+
+fl=(22)
+fn=(82)
+110 1
+
+fl=(22)
+fn=(82)
+113 1
+
+fl=(22)
+fn=(82)
+132 1
+
+fl=(22)
+fn=(82)
+140 2
+
+fl=(22)
+fn=(82)
+141 1
+
+fl=(22)
+fn=(82)
+142 2
+
+fl=(22)
+fn=(82)
+146 1
+
+fl=(22)
+fn=(82)
+150 1
+
+fl=(22)
+fn=(83) LightGBM::Dense4bitsBin::FinishLoad
+290 2
+
+fl=(36)
+fn=(74)
+cfl=(18)
+cfn=(66)
+calls=2 278
+34 2
+
+fl=(36)
+fn=(79)
+cfl=(18)
+cfn=(66)
+calls=2 278
+314 2
+
+fl=(27)
+fn=(51)
+cfl=??
+cfn=(47)
+calls=8 0
+48 8
+
+fl=(27)
+fn=(51)
+54 2
+
+fl=(27)
+fn=(51)
+54 5
+
+fl=(27)
+fn=(51)
+55 1
+
+fl=(27)
+fn=(46)
+90 1
+
+fl=(27)
+fn=(46)
+90 1
+
+fl=(27)
+fn=(46)
+91 1
+
+fl=(27)
+fn=(46)
+94 5
+
+fl=(27)
+fn=(46)
+96 1
+
+fl=(27)
+fn=(46)
+97 3
+
+fl=(27)
+fn=(46)
+cfl=??
+cfn=(47)
+calls=12 0
+113 12
+
+fl=(37) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/treelearner/data_partition.hpp
+fn=(84) LightGBM::DataPartition::DataPartition[inline]
+cfl=(18)
+cfn=(40)
+calls=1 676
+23 1
+
+fl=(37)
+fn=(84)
+cfl=(18)
+cfn=(40)
+calls=1 676
+24 1
+
+fl=(37)
+fn=(84)
+cfl=(18)
+cfn=(40)
+calls=1 676
+25 1
+
+fl=(37)
+fn=(85) LightGBM::DataPartition::Init[inline]
+cfl=??
+cfn=(47)
+calls=1 0
+63 1
+
+fl=(37)
+fn=(86) LightGBM::DataPartition::Init
+65 1
+
+fl=(37)
+fn=(87) LightGBM::DataPartition::Split[inline]
+cfl=??
+cfn=(47)
+calls=39 0
+104 39
+
+fl=(37)
+fn=(88) LightGBM::DataPartition::Split
+115 39
+
+fl=(37)
+fn=(87)
+cfl=??
+cfn=(47)
+calls=2 0
+131 2
+
+fl=(37)
+fn=(88)
+135 2
+
+fl=(38) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/treelearner/feature_histogram.hpp
+fn=(89) LightGBM::FeatureHistogram::FindBestThreshold[inline]
+cfl=(30)
+cfn=(55)
+calls=1 2267
+75 1
+
+fl=(38)
+fn=(90) LightGBM::FeatureHistogram::FindBestThresholdNumerical
+cfl=(38)
+cfn=(91) LightGBM::FeatureHistogram::FindBestThresholdSequence[inline]
+calls=1 300
+86 1
+
+fl=(38)
+fn=(92) LightGBM::FeatureHistogram::GetLeafSplitGain[inline]
+cfl=(39) /usr/include/c++/5/bits/stl_algobase.h
+cfn=(93) std::max[inline]
+calls=1 224
+229 1
+
+fl=(38)
+fn=(91)
+cfl=(38)
+cfn=(92)
+calls=1 229
+300 1
+
+fl=(38)
+fn=(94) LightGBM::HistogramPool::DynamicChangeSize[inline]
+cfl=??
+cfn=(47)
+calls=1 0
+469 1
+
+fl=(38)
+fn=(95) LightGBM::HistogramPool::DynamicChangeSize
+473 1
+
+fl=(40) /home/glemaitre/Documents/work/code/toolbox/LightGBM/src/treelearner/leaf_splits.hpp
+fn=(96) LightGBM::LeafSplits::Init
+55 1
+
+fl=(40)
+fn=(97) LightGBM::LeafSplits::Init[inline]
+cfl=??
+cfn=(47)
+calls=1 0
+74 1
+
+fl=(25)
+fn=(38)
+cfl=(38)
+cfn=(94)
+calls=1 469
+60 1
+
+fl=(25)
+fn=(38)
+cfl=(37)
+cfn=(84)
+calls=1 25
+79 1
+
+fl=(25)
+fn=(38)
+cfl=(37)
+cfn=(84)
+calls=1 24
+79 1
+
+fl=(25)
+fn=(38)
+cfl=(37)
+cfn=(84)
+calls=1 23
+79 1
+
+fl=(25)
+fn=(38)
+cfl=(18)
+cfn=(40)
+calls=2 676
+82 2
+
+fl=(25)
+fn=(38)
+cfl=(18)
+cfn=(40)
+calls=1 676
+83 1
+
+fl=(25)
+fn=(43)
+cfl=(25)
+cfn=(98) LightGBM::SerialTreeLearner::BeforeTrain
+calls=1 292
+176 1
+
+fl=(25)
+fn=(43)
+cfl=(25)
+cfn=(98)
+calls=1 278
+176 1
+
+fl=(25)
+fn=(43)
+cfl=(25)
+cfn=(99) LightGBM::SerialTreeLearner::FindBestThresholds
+calls=1 477
+198 1
+
+fl=(25)
+fn=(43)
+cfl=(25)
+cfn=(99)
+calls=471 469
+198 471
+
+fl=(25)
+fn=(43)
+cfl=(25)
+cfn=(100) LightGBM::SerialTreeLearner::Split
+calls=41 567
+215 41
+
+fl=(25)
+fn=(98)
+cfl=(37)
+cfn=(85)
+calls=1 63
+278 1
+
+fl=(25)
+fn=(98)
+cfl=(40)
+cfn=(97)
+calls=1 74
+292 1
+
+fl=(25)
+fn=(101) LightGBM::SerialTreeLearner::ConstructHistograms
+cfl=(33)
+cfn=(80)
+calls=389 606
+435 389
+
+fl=(25)
+fn=(101)
+cfl=(33)
+cfn=(80)
+calls=37 591
+435 37
+
+fl=(25)
+fn=(101)
+cfl=(33)
+cfn=(80)
+calls=45 686
+435 45
+
+fl=(25)
+fn=(99)
+cfl=(25)
+cfn=(101)
+calls=471 435
+469 471
+
+fl=(25)
+fn=(99)
+cfl=??
+cfn=(47)
+calls=1 0
+477 1
+
+fl=(25)
+fn=(99)
+492 1
+
+fl=(25)
+fn=(100)
+cfl=(37)
+cfn=(87)
+calls=2 131
+567 2
+
+fl=(25)
+fn=(100)
+cfl=(37)
+cfn=(87)
+calls=39 104
+567 39
+
+fl=(28)
+fn=(48)
+cfl=??
+cfn=(47)
+calls=10 0
+55 10
+
+fl=(28)
+fn=(48)
+61 10
+
+fl=(41) /home/ilan/minonda/conda-bld/numpy_1489893786204/work/numpy-1.12.1/numpy/core/src/multiarray/array_assign_array.c
+fn=(102) raw_array_assign_array
+cfl=(42) /home/ilan/minonda/conda-bld/numpy_1489893786204/work/numpy-1.12.1/numpy/core/src/multiarray/dtype_transfer.c
+cfn=(103) PyArray_GetDTypeTransferFunction
+calls=1 3640
+81 1
+
+fl=(41)
+fn=(102)
+cfl=(43) /home/ilan/minonda/conda-bld/numpy_1489893786204/work/numpy-1.12.1/numpy/core/src/multiarray/lowlevel_strided_loops.c.src
+cfn=(104) _aligned_contig_cast_long_to_float
+calls=2 867
+96 2
+
+fl=(41)
+fn=(105) PyArray_AssignArray
+cfl=(41)
+cfn=(102)
+calls=1 81
+351 1
+
+fl=(41)
+fn=(105)
+cfl=(41)
+cfn=(102)
+calls=2 96
+351 2
+
+fl=(42)
+fn=(106) get_nbo_cast_numeric_transfer_function
+cfl=(43)
+cfn=(107) PyArray_GetStridedNumericCastFn
+calls=1 929
+721 1
+
+fl=(42)
+fn=(103)
+cfl=(42)
+cfn=(106)
+calls=1 721
+3640 1
+
+fl=(43)
+fn=(104)
+867 2
+
+fl=(43)
+fn=(107)
+929 1
+
+fl=(44) /home/ilan/minonda/conda-bld/numpy_1489893786204/work/numpy-1.12.1/numpy/core/src/multiarray/methods.c
+fn=(108) array_astype
+cfl=(41)
+cfn=(105)
+calls=3 351
+836 3
+
+fl=(45) /home/ilan/minonda/conda-bld/pandas_1486247149891/work/pandas/window.c
+fn=(109) PyInit__window
+cfl=(45)
+cfn=(110) __Pyx_Import
+calls=1 58651
+56315 1
+
+fl=(45)
+fn=(110)
+cfl=(46) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/import.c
+cfn=(111) PyImport_ImportModuleLevelObject
+calls=1 1592
+58651 1
+
+fl=(47) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_functoolsmodule.c
+fn=(112) partial_call
+cfl=(48) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/abstract.c
+cfn=(113) _PyObject_FastCallDict
+calls=1 2295
+179 1
+
+fl=(49) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_io/clinic/fileio.c.h
+fn=(114) _io_FileIO_close
+cfl=(50) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_io/fileio.c
+cfn=(115) _io_FileIO_close_impl[inline]
+calls=1 153
+23 1
+
+fl=(49)
+fn=(116) _io_FileIO_read
+cfl=(50)
+cfn=(117) _io_FileIO_read_impl[inline]
+calls=1 797
+220 1
+
+fl=(51) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_io/clinic/iobase.c.h
+fn=(118) _io__IOBase_close
+cfl=(52) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_io/iobase.c
+cfn=(119) _io__IOBase_close_impl[inline]
+calls=1 215
+60 1
+
+fl=(51)
+fn=(120) _io__IOBase_readlines
+cfl=(52)
+cfn=(121) _io__IOBase_readlines_impl[inline]
+calls=1 664
+224 1
+
+fl=(50)
+fn=(115)
+cfl=(48)
+cfn=(122) _PyObject_CallMethodId_SizeT
+calls=1 2669
+153 1
+
+fl=(50)
+fn=(123) _io_FileIO_readall_impl
+743 1
+
+fl=(50)
+fn=(117)
+cfl=(50)
+cfn=(123)
+calls=1 743
+797 1
+
+fl=(52)
+fn=(119)
+cfl=(53) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/object.c
+cfn=(124) PyObject_HasAttr
+calls=1 907
+215 1
+
+fl=(52)
+fn=(121)
+cfl=(48)
+cfn=(122)
+calls=1 2669
+664 1
+
+fl=(54) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_io/textio.c
+fn=(125) _PyIO_find_line_ending
+1742 1
+
+fl=(54)
+fn=(126) _textiowrapper_readline
+cfl=(54)
+cfn=(125)
+calls=1 1742
+1810 1
+
+fl=(54)
+fn=(127) textiowrapper_iternext
+cfl=(54)
+cfn=(126)
+calls=1 1810
+2678 1
+
+fl=(55) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/_sre.c
+fn=(128) sre_search
+cfl=(56) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/sre_lib.h
+cfn=(129) sre_ucs1_search[inline]
+calls=1 1354
+547 1
+
+fl=(55)
+fn=(130) pattern_subx
+cfl=(55)
+cfn=(128)
+calls=1 547
+1126 1
+
+fl=(55)
+fn=(131) _sre_SRE_Pattern_sub_impl[inline]
+cfl=(55)
+cfn=(130)
+calls=1 1126
+1257 1
+
+fl=(57) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/clinic/_sre.c.h
+fn=(132) _sre_SRE_Pattern_sub
+cfl=(55)
+cfn=(131)
+calls=1 1257
+337 1
+
+fl=(58) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/clinic/posixmodule.c.h
+fn=(133) os_stat
+cfl=(59) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Modules/posixmodule.c
+cfn=(134) os_stat_impl[inline]
+calls=1 2415
+49 1
+
+fl=(59)
+fn=(135) posix_do_stat
+cfl=(60) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/ceval.c
+cfn=(136) PyEval_SaveThread
+calls=1 355
+2049 1
+
+fl=(59)
+fn=(134)
+cfl=(59)
+cfn=(135)
+calls=1 2049
+2415 1
+
+fl=(56)
+fn=(137) sre_ucs1_at[inline]
+29 1
+
+fl=(56)
+fn=(138) sre_ucs1_match
+cfl=(56)
+cfn=(137)
+calls=1 29
+605 1
+
+fl=(56)
+fn=(129)
+cfl=(56)
+cfn=(138)
+calls=1 605
+1354 1
+
+fl=(61) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Python/dynload_shlib.c
+fn=(139) _PyImport_FindSharedFuncptr
+cfl=(3)
+cfn=(5)
+calls=2 87
+95 2
+
+fl=(62) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/./Python/importdl.c
+fn=(140) _PyImport_LoadDynamicModuleWithSpec
+cfl=(61)
+cfn=(139)
+calls=2 95
+124 2
+
+fl=(62)
+fn=(140)
+cfl=(45)
+cfn=(109)
+calls=1 56315
+154 1
+
+fl=(62)
+fn=(140)
+cfl=(63) /home/ilan/minonda/conda-bld/scipy_1489399120100/work/scipy-0.19.0/scipy/interpolate/_ppoly.c
+cfn=(141) PyInit__ppoly
+calls=1 30566
+154 1
+
+fl=(62)
+fn=(140)
+cfl=(64) /home/ilan/minonda/conda-bld/scipy_1489399120100/work/scipy-0.19.0/scipy/sparse/_csparsetools.c
+cfn=(142) PyInit__csparsetools
+calls=1 32508
+154 1
+
+fl=(62)
+fn=(140)
+cfl=(65) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_json.c
+cfn=(143) PyInit__json
+calls=1 1956
+154 1
+
+fl=(66) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_ctypes/_ctypes.c
+fn=(144) PyCFuncPtr_call
+cfl=(67) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_ctypes/callproc.c
+cfn=(145) _ctypes_callproc
+calls=648 1147
+3870 648
+
+fl=(67)
+fn=(146) _call_function_pointer[inline]
+cfl=(68) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_ctypes/libffi/src/x86/ffi64.c
+cfn=(147) ffi_call
+calls=648 525
+809 648
+
+fl=(67)
+fn=(145)
+cfl=(67)
+cfn=(146)
+calls=648 809
+1147 648
+
+fl=(68)
+fn=(147)
+cfl=(69) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_ctypes/libffi/src/x86/unix64.S
+cfn=(148) ffi_call_unix64
+calls=648 76
+525 648
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(61)
+calls=2 716
+76 2
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=4 463
+76 4
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=65 468
+76 65
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=1 445
+76 1
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(64)
+calls=537 850
+76 537
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=7 462
+76 7
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=2 488
+76 2
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(53)
+calls=9 459
+76 9
+
+fl=(69)
+fn=(148)
+cfl=(29)
+cfn=(63)
+calls=21 772
+76 21
+
+fl=(65)
+fn=(143)
+cfl=(70) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/typeobject.c
+cfn=(149) PyType_Ready
+calls=1 4949
+1956 1
+
+fl=(71) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/_randommodule.c
+fn=(150) random_seed_urandom
+cfl=(72) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/random.c
+cfn=(151) dev_urandom
+calls=1 304
+208 1
+
+fl=(71)
+fn=(152) random_seed
+cfl=(71)
+cfn=(150)
+calls=1 208
+248 1
+
+fl=(71)
+fn=(153) random_new
+cfl=(71)
+cfn=(152)
+calls=1 248
+442 1
+
+fl=(73) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Modules/gcmodule.c
+fn=(154) visit_decref
+372 1
+
+fl=(73)
+fn=(154)
+374 1
+
+fl=(73)
+fn=(155) subtract_refs[inline]
+cfl=(74) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/funcobject.c
+cfn=(156) cm_traverse
+calls=1 708
+399 1
+
+fl=(73)
+fn=(155)
+cfl=(75) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/tupleobject.c
+cfn=(157) tupletraverse
+calls=1 571
+399 1
+
+fl=(73)
+fn=(158) untrack_dicts[inline]
+518 1
+
+fl=(73)
+fn=(159) collect
+cfl=(73)
+cfn=(155)
+calls=2 399
+956 2
+
+fl=(73)
+fn=(159)
+cfl=(73)
+cfn=(158)
+calls=1 518
+977 1
+
+fl=(73)
+fn=(160) collect_with_callback[inline]
+cfl=(73)
+cfn=(159)
+calls=1 977
+1128 1
+
+fl=(73)
+fn=(160)
+cfl=(73)
+cfn=(159)
+calls=2 956
+1128 2
+
+fl=(73)
+fn=(161) collect_generations[inline]
+cfl=(73)
+cfn=(160)
+calls=3 1128
+1151 3
+
+fl=(73)
+fn=(162) _PyObject_GC_Alloc
+cfl=(76) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/obmalloc.c
+cfn=(163) _PyObject_Alloc
+calls=1 1280
+1714 1
+
+fl=(73)
+fn=(162)
+cfl=??
+cfn=(164) _init
+calls=1 0
+1714 1
+
+fl=(73)
+fn=(162)
+cfl=(73)
+cfn=(161)
+calls=3 1151
+1726 3
+
+fl=(73)
+fn=(165) _PyObject_GC_New
+cfl=(73)
+cfn=(162)
+calls=1 1714
+1748 1
+
+fl=(73)
+fn=(165)
+cfl=(73)
+cfn=(162)
+calls=1 1726
+1748 1
+
+fl=(73)
+fn=(166) _PyObject_GC_NewVar
+1756 1
+
+fl=(73)
+fn=(166)
+cfl=(73)
+cfn=(162)
+calls=1 1714
+1765 1
+
+fl=(73)
+fn=(166)
+cfl=(73)
+cfn=(162)
+calls=1 1726
+1765 1
+
+fl=(48)
+fn=(167) binary_op1
+759 1
+
+fl=(48)
+fn=(168) PyNumber_Add
+cfl=(48)
+cfn=(167)
+calls=1 759
+915 1
+
+fl=(48)
+fn=(169) PySequence_List
+cfl=(77) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/listobject.c
+cfn=(170) listextend
+calls=1 807
+1856 1
+
+fl=(48)
+fn=(171) PyObject_Call
+cfl=(74)
+cfn=(172) function_call
+calls=3 604
+2246 3
+
+fl=(48)
+fn=(171)
+cfl=(48)
+cfn=(173) _PyObject_Call_Prepend
+calls=138 2358
+2246 138
+
+fl=(48)
+fn=(174) _PyStack_AsTuple
+2255 1
+
+fl=(48)
+fn=(174)
+cfl=(75)
+cfn=(175) PyTuple_New
+calls=1 114
+2259 1
+
+fl=(48)
+fn=(174)
+cfl=(75)
+cfn=(175)
+calls=1 130
+2259 1
+
+fl=(48)
+fn=(174)
+2259 1
+
+fl=(48)
+fn=(113)
+cfl=(60)
+cfn=(176) _PyFunction_FastCallDict
+calls=95 4972
+2295 95
+
+fl=(48)
+fn=(113)
+cfl=(60)
+cfn=(176)
+calls=139 5021
+2295 139
+
+fl=(48)
+fn=(113)
+cfl=(60)
+cfn=(176)
+calls=1 4966
+2295 1
+
+fl=(48)
+fn=(113)
+cfl=(78) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/methodobject.c
+cfn=(177) _PyCFunction_FastCallDict
+calls=1 209
+2298 1
+
+fl=(48)
+fn=(113)
+cfl=(78)
+cfn=(177)
+calls=1 234
+2298 1
+
+fl=(48)
+fn=(113)
+cfl=(78)
+cfn=(177)
+calls=2 192
+2298 2
+
+fl=(48)
+fn=(113)
+cfl=(70)
+cfn=(178) slot_tp_call
+calls=4 6167
+2316 4
+
+fl=(48)
+fn=(113)
+cfl=(70)
+cfn=(179) type_call
+calls=10 895
+2316 10
+
+fl=(48)
+fn=(113)
+cfl=(47)
+cfn=(112)
+calls=1 179
+2316 1
+
+fl=(48)
+fn=(113)
+cfl=(66)
+cfn=(144)
+calls=648 3870
+2316 648
+
+fl=(48)
+fn=(113)
+cfl=(70)
+cfn=(179)
+calls=135 915
+2316 135
+
+fl=(48)
+fn=(113)
+cfl=(79) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/descrobject.c
+cfn=(180) methoddescr_call
+calls=1 246
+2316 1
+
+fl=(48)
+fn=(113)
+cfl=(48)
+cfn=(173)
+calls=7 2358
+2316 7
+
+fl=(48)
+fn=(113)
+cfl=(80) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/classobject.c
+cfn=(181) method_call
+calls=1 317
+2316 1
+
+fl=(48)
+fn=(173)
+cfl=(48)
+cfn=(113)
+calls=148 2295
+2358 148
+
+fl=(48)
+fn=(182) _PyObject_FastCallKeywords
+cfl=(48)
+cfn=(113)
+calls=129 2316
+2480 129
+
+fl=(48)
+fn=(183) call_function_tail
+cfl=(48)
+cfn=(113)
+calls=1 2316
+2493 1
+
+fl=(48)
+fn=(183)
+cfl=(48)
+cfn=(113)
+calls=1 2298
+2493 1
+
+fl=(48)
+fn=(184) callmethod
+cfl=(48)
+cfn=(183)
+calls=2 2493
+2580 2
+
+fl=(48)
+fn=(122)
+cfl=(48)
+cfn=(184)
+calls=2 2580
+2669 2
+
+fl=(48)
+fn=(185) objargs_mkstack
+2684 1
+
+fl=(48)
+fn=(186) PyObject_CallMethodObjArgs
+cfl=(48)
+cfn=(113)
+calls=1 2298
+2743 1
+
+fl=(48)
+fn=(187) _PyObject_CallMethodIdObjArgs
+cfl=(48)
+cfn=(113)
+calls=83 2295
+2780 83
+
+fl=(48)
+fn=(188) PyObject_CallFunctionObjArgs
+cfl=(48)
+cfn=(185)
+calls=1 2684
+2804 1
+
+fl=(48)
+fn=(188)
+cfl=(48)
+cfn=(113)
+calls=1 2298
+2811 1
+
+fl=(48)
+fn=(188)
+cfl=(48)
+cfn=(113)
+calls=5 2316
+2811 5
+
+fl=(48)
+fn=(189) PyIter_Next
+cfl=(81) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/setobject.c
+cfn=(190) setiter_iternext
+calls=1 908
+3146 1
+
+fl=(82) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/bytes_methods.c
+fn=(191) _Py_bytes_find
+535 1
+
+fl=(83) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/bytesobject.c
+fn=(192) _PyBytes_FromSize
+cfl=(76)
+cfn=(163)
+calls=1 1274
+83 1
+
+fl=(83)
+fn=(192)
+cfl=(76)
+cfn=(163)
+calls=1 1258
+83 1
+
+fl=(83)
+fn=(193) PyBytes_FromStringAndSize
+cfl=(83)
+cfn=(192)
+calls=2 83
+117 2
+
+fl=(84) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/cellobject.c
+fn=(194) PyCell_New
+cfl=(73)
+cfn=(165)
+calls=1 1748
+10 1
+
+fl=(80)
+fn=(181)
+317 1
+
+fl=(85) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/codeobject.c
+fn=(195) intern_string_constants
+68 1
+
+fl=(85)
+fn=(196) PyCode_New
+cfl=(85)
+cfn=(195)
+calls=1 68
+141 1
+
+fl=(85)
+fn=(197) code_hash
+cfl=(53)
+cfn=(198) PyObject_Hash
+calls=1 762
+683 1
+
+fl=(79)
+fn=(180)
+cfl=(48)
+cfn=(113)
+calls=1 2298
+246 1
+
+fl=(79)
+fn=(199) property_descr_get
+cfl=(48)
+cfn=(171)
+calls=2 2246
+1384 2
+
+fl=(86) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/dictobject.c
+fn=(200) dk_get_index[inline]
+320 1
+
+fl=(86)
+fn=(200)
+326 1
+
+fl=(86)
+fn=(201) free_keys_object
+560 1
+
+fl=(86)
+fn=(202) lookdict_unicode
+832 1
+
+fl=(86)
+fn=(203) lookdict_unicode_nodummy
+879 1
+
+fl=(86)
+fn=(203)
+cfl=(86)
+cfn=(200)
+calls=1 326
+895 1
+
+fl=(86)
+fn=(203)
+cfl=(86)
+cfn=(200)
+calls=1 320
+895 1
+
+fl=(86)
+fn=(204) lookdict_split
+997 1
+
+fl=(86)
+fn=(205) insertdict
+cfl=(86)
+cfn=(204)
+calls=1 997
+1122 1
+
+fl=(86)
+fn=(206) PyDict_GetItem
+1422 1
+
+fl=(86)
+fn=(206)
+cfl=(86)
+cfn=(203)
+calls=1 879
+1422 1
+
+fl=(86)
+fn=(206)
+cfl=(86)
+cfn=(203)
+calls=1 895
+1422 1
+
+fl=(86)
+fn=(206)
+1428 1
+
+fl=(86)
+fn=(207) _PyDict_LoadGlobal
+cfl=(86)
+cfn=(203)
+calls=1 895
+1525 1
+
+fl=(86)
+fn=(208) PyDict_SetItem
+cfl=(75)
+cfn=(209) tuplehash
+calls=1 358
+1552 1
+
+fl=(86)
+fn=(210) dict_dealloc
+1916 1
+
+fl=(86)
+fn=(210)
+1921 1
+
+fl=(86)
+fn=(210)
+cfl=(86)
+cfn=(201)
+calls=1 560
+1933 1
+
+fl=(86)
+fn=(211) PyDict_SetDefault
+cfl=(87) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/unicodeobject.c
+cfn=(212) unicode_hash
+calls=1 11693
+2770 1
+
+fl=(86)
+fn=(211)
+cfl=(86)
+cfn=(202)
+calls=1 832
+2780 1
+
+fl=(86)
+fn=(213) _PyObjectDict_SetItem
+cfl=(86)
+cfn=(205)
+calls=1 1122
+4300 1
+
+fl=(88) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/frameobject.c
+fn=(214) PyFrame_New
+cfl=(86)
+cfn=(206)
+calls=1 1422
+625 1
+
+fl=(74)
+fn=(172)
+cfl=(60)
+cfn=(215) PyEval_EvalCodeEx
+calls=3 4140
+604 3
+
+fl=(74)
+fn=(156)
+cfl=(73)
+cfn=(154)
+calls=1 372
+708 1
+
+fl=(89) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/iterobject.c
+fn=(216) iter_iternext
+cfl=(70)
+cfn=(217) slot_sq_item
+calls=2 5876
+63 2
+
+fl=(77)
+fn=(218) list_resize[inline]
+cfl=(76)
+cfn=(219) _PyObject_Realloc
+calls=1 1675
+63 1
+
+fl=(77)
+fn=(220) PyList_New
+158 1
+
+fl=(77)
+fn=(221) PyList_Append
+304 1
+
+fl=(77)
+fn=(170)
+cfl=(77)
+cfn=(218)
+calls=1 63
+807 1
+
+fl=(77)
+fn=(170)
+cfl=(90) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/bltinmodule.c
+cfn=(222) map_next
+calls=2 1217
+857 2
+
+fl=(77)
+fn=(170)
+cfl=(54)
+cfn=(127)
+calls=1 2678
+857 1
+
+fl=(77)
+fn=(223) list_init
+cfl=(77)
+cfn=(170)
+calls=2 857
+2316 2
+
+fl=(91) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/longobject.c
+fn=(224) long_dealloc
+2885 1
+
+fl=(78)
+fn=(225) PyCFunction_Call
+cfl=(90)
+cfn=(226) builtin___import__
+calls=21 231
+98 21
+
+fl=(78)
+fn=(225)
+cfl=(92) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/clinic/import.c.h
+cfn=(227) _imp_create_dynamic
+calls=6 289
+114 6
+
+fl=(78)
+fn=(225)
+cfl=(93) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/clinic/bltinmodule.c.h
+cfn=(228) builtin_exec
+calls=87 281
+114 87
+
+fl=(78)
+fn=(177)
+cfl=(49)
+cfn=(114)
+calls=1 23
+192 1
+
+fl=(78)
+fn=(177)
+cfl=(51)
+cfn=(118)
+calls=1 60
+192 1
+
+fl=(78)
+fn=(177)
+cfl=(77)
+cfn=(170)
+calls=1 857
+209 1
+
+fl=(78)
+fn=(177)
+cfl=(48)
+cfn=(174)
+calls=3 2259
+225 3
+
+fl=(78)
+fn=(177)
+cfl=(48)
+cfn=(174)
+calls=1 2255
+225 1
+
+fl=(78)
+fn=(177)
+cfl=(44)
+cfn=(108)
+calls=3 836
+231 3
+
+fl=(78)
+fn=(177)
+cfl=(90)
+cfn=(229) builtin___build_class__
+calls=5 170
+231 5
+
+fl=(78)
+fn=(177)
+cfl=(94) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/stringlib/unicode_format.h
+cfn=(230) do_string_format
+calls=2 950
+231 2
+
+fl=(78)
+fn=(177)
+cfl=(90)
+cfn=(229)
+calls=5 175
+231 5
+
+fl=(78)
+fn=(177)
+cfl=(70)
+cfn=(231) tp_new_wrapper
+calls=1 5697
+231 1
+
+fl=(78)
+fn=(177)
+cfl=(93)
+cfn=(228)
+calls=1242 281
+234 1242
+
+fl=(78)
+fn=(177)
+cfl=(48)
+cfn=(186)
+calls=1 2743
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(51)
+cfn=(120)
+calls=1 224
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(49)
+cfn=(116)
+calls=1 220
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(82)
+cfn=(191)
+calls=1 535
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(95) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/marshal.c
+cfn=(232) marshal_loads
+calls=12 1765
+234 12
+
+fl=(78)
+fn=(177)
+cfl=(93)
+cfn=(233) builtin_hasattr
+calls=1 334
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(90)
+cfn=(234) builtin_next
+calls=1 1321
+234 1
+
+fl=(78)
+fn=(177)
+cfl=(58)
+cfn=(133)
+calls=1 49
+251 1
+
+fl=(78)
+fn=(177)
+cfl=(57)
+cfn=(132)
+calls=1 337
+251 1
+
+fl=(78)
+fn=(235) _PyCFunction_FastCallKeywords
+cfl=(78)
+cfn=(177)
+calls=4 231
+295 4
+
+fl=(96) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Objects/moduleobject.c
+fn=(236) module_getattro
+cfl=(53)
+cfn=(237) _PyObject_GenericGetAttrWithDict
+calls=1 1092
+663 1
+
+fl=(96)
+fn=(236)
+cfl=(53)
+cfn=(237)
+calls=1 1089
+663 1
+
+fl=(96)
+fn=(236)
+cfl=??
+cfn=(164)
+calls=1 0
+663 1
+
+fl=(53)
+fn=(198)
+762 1
+
+fl=(53)
+fn=(124)
+cfl=(53)
+cfn=(237)
+calls=1 1109
+907 1
+
+fl=(53)
+fn=(238) PyObject_SetAttr
+cfl=(53)
+cfn=(239) _PyObject_GenericSetAttrWithDict
+calls=1 1172
+932 1
+
+fl=(53)
+fn=(237)
+cfl=(70)
+cfn=(240) _PyType_Lookup
+calls=2 2915
+1053 2
+
+fl=(53)
+fn=(237)
+cfl=(70)
+cfn=(240)
+calls=1 2964
+1053 1
+
+fl=(53)
+fn=(237)
+cfl=(79)
+cfn=(199)
+calls=2 1384
+1060 2
+
+fl=(53)
+fn=(237)
+cfl=(86)
+cfn=(206)
+calls=1 1422
+1089 1
+
+fl=(53)
+fn=(237)
+cfl=(86)
+cfn=(206)
+calls=1 1428
+1089 1
+
+fl=(53)
+fn=(237)
+1092 1
+
+fl=(53)
+fn=(237)
+cfl=(97) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/errors.c
+cfn=(241) PyErr_Format
+calls=2 846
+1109 2
+
+fl=(53)
+fn=(239)
+cfl=(86)
+cfn=(213)
+calls=1 4300
+1172 1
+
+fl=(76)
+fn=(242) _PyObject_ArenaMmap
+cfl=(13)
+cfn=(21)
+calls=1 34
+124 1
+
+fl=(76)
+fn=(243) PyMem_RawMalloc
+384 1
+
+fl=(76)
+fn=(244) new_arena[inline]
+cfl=(76)
+cfn=(242)
+calls=1 124
+1085 1
+
+fl=(76)
+fn=(163)
+1258 2
+
+fl=(76)
+fn=(163)
+1274 1
+
+fl=(76)
+fn=(163)
+1280 1
+
+fl=(76)
+fn=(163)
+cfl=(76)
+cfn=(244)
+calls=1 1085
+1300 1
+
+fl=(76)
+fn=(163)
+cfl=(76)
+cfn=(243)
+calls=1 384
+1427 1
+
+fl=(76)
+fn=(219)
+1675 1
+
+fl=(81)
+fn=(190)
+908 1
+
+fl=(94)
+fn=(245) do_markup[inline]
+cfl=(87)
+cfn=(246) _PyUnicodeWriter_WriteSubstring
+calls=2 13607
+879 2
+
+fl=(94)
+fn=(247) build_string
+cfl=(94)
+cfn=(245)
+calls=2 879
+918 2
+
+fl=(94)
+fn=(230)
+cfl=(94)
+cfn=(247)
+calls=2 918
+950 2
+
+fl=(75)
+fn=(175)
+cfl=(73)
+cfn=(166)
+calls=1 1756
+114 1
+
+fl=(75)
+fn=(175)
+cfl=(73)
+cfn=(166)
+calls=2 1765
+114 2
+
+fl=(75)
+fn=(175)
+130 1
+
+fl=(75)
+fn=(248) PyTuple_Pack
+207 1
+
+fl=(75)
+fn=(209)
+cfl=(85)
+cfn=(197)
+calls=1 683
+358 1
+
+fl=(75)
+fn=(157)
+cfl=(73)
+cfn=(154)
+calls=1 374
+571 1
+
+fl=(70)
+fn=(179)
+cfl=(71)
+cfn=(153)
+calls=1 442
+895 1
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(249) type_new
+calls=2 2706
+895 2
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(249)
+calls=2 2710
+895 2
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(250) object_new
+calls=1 3469
+895 1
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(249)
+calls=1 2495
+895 1
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(251) slot_tp_new
+calls=3 6405
+895 3
+
+fl=(70)
+fn=(179)
+cfl=(77)
+cfn=(223)
+calls=2 2316
+915 2
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(252) slot_tp_init
+calls=131 6380
+915 131
+
+fl=(70)
+fn=(179)
+cfl=(70)
+cfn=(252)
+calls=2 6375
+915 2
+
+fl=(70)
+fn=(253) PyType_GenericAlloc
+cfl=(73)
+cfn=(162)
+calls=1 1726
+936 1
+
+fl=(70)
+fn=(254) lookup_maybe[inline]
+cfl=(70)
+cfn=(240)
+calls=1 2915
+1397 1
+
+fl=(70)
+fn=(254)
+1400 1
+
+fl=(70)
+fn=(255) lookup_method[inline]
+cfl=(70)
+cfn=(254)
+calls=1 1397
+1411 1
+
+fl=(70)
+fn=(255)
+cfl=(70)
+cfn=(254)
+calls=1 1400
+1411 1
+
+fl=(70)
+fn=(256) call_method
+cfl=(48)
+cfn=(171)
+calls=2 2246
+1453 2
+
+fl=(70)
+fn=(256)
+cfl=(48)
+cfn=(113)
+calls=1 2316
+1457 1
+
+fl=(70)
+fn=(257) mro_implementation
+cfl=(77)
+cfn=(220)
+calls=1 158
+1743 1
+
+fl=(70)
+fn=(257)
+cfl=(48)
+cfn=(169)
+calls=1 1856
+1759 1
+
+fl=(70)
+fn=(258) mro_invoke[inline]
+cfl=(70)
+cfn=(257)
+calls=1 1759
+1863 1
+
+fl=(70)
+fn=(258)
+cfl=(70)
+cfn=(257)
+calls=1 1743
+1863 1
+
+fl=(70)
+fn=(259) mro_internal
+cfl=(70)
+cfn=(258)
+calls=2 1863
+1914 2
+
+fl=(70)
+fn=(249)
+cfl=(70)
+cfn=(253)
+calls=1 936
+2495 1
+
+fl=(70)
+fn=(249)
+cfl=(70)
+cfn=(149)
+calls=2 4981
+2706 2
+
+fl=(70)
+fn=(249)
+cfl=(70)
+cfn=(260) fixup_slot_dispatchers[inline]
+calls=3 6995
+2710 3
+
+fl=(70)
+fn=(240)
+2915 3
+
+fl=(70)
+fn=(240)
+2958 2
+
+fl=(70)
+fn=(240)
+cfl=(86)
+cfn=(206)
+calls=1 1422
+2958 1
+
+fl=(70)
+fn=(240)
+2964 1
+
+fl=(70)
+fn=(250)
+3469 1
+
+fl=(70)
+fn=(149)
+cfl=(75)
+cfn=(248)
+calls=1 207
+4949 1
+
+fl=(70)
+fn=(149)
+cfl=(70)
+cfn=(259)
+calls=2 1914
+4981 2
+
+fl=(70)
+fn=(231)
+cfl=(70)
+cfn=(249)
+calls=1 2710
+5697 1
+
+fl=(70)
+fn=(217)
+cfl=(48)
+cfn=(113)
+calls=2 2316
+5876 2
+
+fl=(70)
+fn=(261) slot_mp_ass_subscript
+cfl=(70)
+cfn=(256)
+calls=2 1453
+5944 2
+
+fl=(70)
+fn=(178)
+cfl=(48)
+cfn=(171)
+calls=4 2246
+6167 4
+
+fl=(70)
+fn=(252)
+cfl=(70)
+cfn=(255)
+calls=2 1411
+6375 2
+
+fl=(70)
+fn=(252)
+cfl=(48)
+cfn=(171)
+calls=131 2246
+6380 131
+
+fl=(70)
+fn=(251)
+cfl=(48)
+cfn=(173)
+calls=3 2358
+6405 3
+
+fl=(70)
+fn=(262) update_one_slot
+cfl=(70)
+cfn=(240)
+calls=3 2958
+6842 3
+
+fl=(70)
+fn=(260)
+cfl=(70)
+cfn=(262)
+calls=3 6842
+6995 3
+
+fl=(87)
+fn=(263) resize_compact
+881 1
+
+fl=(87)
+fn=(264) PyUnicode_New
+1222 1
+
+fl=(87)
+fn=(264)
+cfl=(76)
+cfn=(163)
+calls=1 1427
+1281 1
+
+fl=(87)
+fn=(264)
+cfl=(76)
+cfn=(163)
+calls=1 1258
+1281 1
+
+fl=(87)
+fn=(265) _copy_characters
+cfl=(14)
+cfn=(22)
+calls=1 41
+1438 1
+
+fl=(87)
+fn=(266) _PyUnicode_FromUCS1
+cfl=(87)
+cfn=(264)
+calls=1 1222
+2172 1
+
+fl=(87)
+fn=(267) unicode_fromformat_write_cstr
+2568 1
+
+fl=(87)
+fn=(268) unicode_fromformat_arg[inline]
+cfl=(87)
+cfn=(267)
+calls=1 2568
+2769 1
+
+fl=(87)
+fn=(269) PyUnicode_FromFormatV
+cfl=(87)
+cfn=(268)
+calls=1 2769
+2886 1
+
+fl=(87)
+fn=(269)
+cfl=(87)
+cfn=(270) _PyUnicodeWriter_Finish
+calls=1 13710
+2919 1
+
+fl=(87)
+fn=(271) PyUnicode_Append
+cfl=(87)
+cfn=(265)
+calls=1 1438
+11396 1
+
+fl=(87)
+fn=(212)
+cfl=(98) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/pyhash.c
+cfn=(272) _Py_HashBytes
+calls=1 186
+11693 1
+
+fl=(87)
+fn=(273) _PyUnicodeWriter_PrepareInternal
+cfl=(87)
+cfn=(264)
+calls=2 1281
+13465 2
+
+fl=(87)
+fn=(246)
+cfl=(87)
+cfn=(273)
+calls=2 13465
+13607 2
+
+fl=(87)
+fn=(270)
+cfl=(87)
+cfn=(263)
+calls=1 881
+13710 1
+
+fl=(87)
+fn=(274) PyUnicode_InternInPlace
+cfl=(86)
+cfn=(211)
+calls=1 2770
+15202 1
+
+fl=(87)
+fn=(274)
+cfl=(86)
+cfn=(211)
+calls=1 2780
+15202 1
+
+fl=(99) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Parser/node.c
+fn=(275) PyNode_AddChild
+cfl=(76)
+cfn=(163)
+calls=1 1300
+98 1
+
+fl=(100) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Parser/parser.c
+fn=(276) push[inline]
+cfl=(99)
+cfn=(275)
+calls=1 98
+126 1
+
+fl=(100)
+fn=(277) PyParser_AddToken
+cfl=(100)
+cfn=(276)
+calls=1 126
+259 1
+
+fl=(100)
+fn=(277)
+278 1
+
+fl=(101) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Parser/parsetok.c
+fn=(278) parsetok
+cfl=(100)
+cfn=(277)
+calls=1 259
+263 1
+
+fl=(101)
+fn=(278)
+cfl=(100)
+cfn=(277)
+calls=1 278
+263 1
+
+fl=(90)
+fn=(229)
+cfl=(60)
+cfn=(215)
+calls=5 4140
+170 5
+
+fl=(90)
+fn=(229)
+cfl=(48)
+cfn=(113)
+calls=5 2316
+175 5
+
+fl=(90)
+fn=(226)
+cfl=(46)
+cfn=(111)
+calls=21 1592
+231 21
+
+fl=(90)
+fn=(279) builtin_exec_impl[inline]
+cfl=(60)
+cfn=(280) PyEval_EvalCode
+calls=1347 695
+974 1347
+
+fl=(90)
+fn=(279)
+cfl=(102) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/pythonrun.c
+cfn=(281) PyRun_StringFlags
+calls=4 904
+990 4
+
+fl=(90)
+fn=(279)
+cfl=(102)
+cfn=(281)
+calls=2 902
+990 2
+
+fl=(90)
+fn=(282) builtin_hasattr_impl[inline]
+cfl=(53)
+cfn=(237)
+calls=1 1109
+1078 1
+
+fl=(90)
+fn=(222)
+cfl=(48)
+cfn=(113)
+calls=2 2295
+1217 2
+
+fl=(90)
+fn=(234)
+cfl=(70)
+cfn=(256)
+calls=1 1457
+1321 1
+
+fl=(60)
+fn=(136)
+cfl=(103) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/ceval_gil.h
+cfn=(283) drop_gil
+calls=1 187
+355 1
+
+fl=(60)
+fn=(280)
+cfl=(60)
+cfn=(215)
+calls=1354 4140
+695 1354
+
+fl=(60)
+fn=(284) _PyEval_EvalFrameDefault
+1240 1
+
+fl=(60)
+fn=(284)
+1246 1
+
+fl=(60)
+fn=(284)
+cfl=(91)
+cfn=(224)
+calls=1 2885
+1254 1
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(285) unicode_concatenate
+calls=1 5368
+1429 1
+
+fl=(60)
+fn=(284)
+cfl=(48)
+cfn=(168)
+calls=1 915
+1433 1
+
+fl=(60)
+fn=(284)
+cfl=(70)
+cfn=(261)
+calls=1 5944
+1721 1
+
+fl=(60)
+fn=(284)
+2114 1
+
+fl=(60)
+fn=(284)
+2169 1
+
+fl=(60)
+fn=(284)
+2204 1
+
+fl=(60)
+fn=(284)
+cfl=(53)
+cfn=(238)
+calls=1 932
+2249 1
+
+fl=(60)
+fn=(284)
+cfl=(86)
+cfn=(207)
+calls=1 1525
+2348 1
+
+fl=(60)
+fn=(284)
+cfl=(86)
+cfn=(210)
+calls=1 1916
+2790 1
+
+fl=(60)
+fn=(284)
+cfl=(53)
+cfn=(237)
+calls=1 1089
+2815 1
+
+fl=(60)
+fn=(284)
+cfl=(53)
+cfn=(237)
+calls=2 1060
+2815 2
+
+fl=(60)
+fn=(284)
+cfl=(96)
+cfn=(236)
+calls=2 663
+2815 2
+
+fl=(60)
+fn=(284)
+cfl=(53)
+cfn=(237)
+calls=2 1053
+2815 2
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(286) import_name[inline]
+calls=54 5166
+2842 54
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(287) import_all_from[inline]
+calls=1 5268
+2863 1
+
+fl=(60)
+fn=(284)
+cfl=(89)
+cfn=(216)
+calls=2 63
+3051 2
+
+fl=(60)
+fn=(284)
+cfl=(48)
+cfn=(188)
+calls=4 2811
+3148 4
+
+fl=(60)
+fn=(284)
+cfl=(48)
+cfn=(188)
+calls=1 2804
+3148 1
+
+fl=(60)
+fn=(284)
+cfl=(48)
+cfn=(188)
+calls=2 2811
+3233 2
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288) call_function
+calls=1 4825
+3275 1
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=664 4812
+3275 664
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=1808 4809
+3275 1808
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=1261 4788
+3275 1261
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=1 4826
+3275 1
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=129 4812
+3291 129
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=1 4824
+3291 1
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=1312 4809
+3291 1312
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(288)
+calls=4 4788
+3291 4
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(289) do_call_core[inline]
+calls=2 5057
+3357 2
+
+fl=(60)
+fn=(284)
+cfl=(60)
+cfn=(289)
+calls=109 5053
+3357 109
+
+fl=(60)
+fn=(284)
+cfl=(104) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/traceback.c
+cfn=(290) PyTraceBack_Here
+calls=1 137
+3522 1
+
+fl=(60)
+fn=(291) _PyEval_EvalCodeWithName
+cfl=(84)
+cfn=(194)
+calls=1 10
+4055 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 2863
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=6 2815
+4119 6
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 2790
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 2204
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1334 3291
+4119 1334
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 3233
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=106 3357
+4119 106
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=2081 3275
+4119 2081
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 2114
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 2169
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=54 2842
+4119 54
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 1429
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 1721
+4119 1
+
+fl=(60)
+fn=(291)
+cfl=(60)
+cfn=(284)
+calls=1 1246
+4119 1
+
+fl=(60)
+fn=(215)
+cfl=(60)
+cfn=(291)
+calls=1372 4119
+4140 1372
+
+fl=(60)
+fn=(288)
+cfl=(78)
+cfn=(177)
+calls=1251 234
+4788 1251
+
+fl=(60)
+fn=(288)
+4788 1
+
+fl=(60)
+fn=(288)
+cfl=(78)
+cfn=(235)
+calls=4 295
+4788 4
+
+fl=(60)
+fn=(288)
+cfl=(78)
+cfn=(177)
+calls=4 225
+4788 4
+
+fl=(60)
+fn=(288)
+cfl=(78)
+cfn=(177)
+calls=12 231
+4788 12
+
+fl=(60)
+fn=(288)
+cfl=(78)
+cfn=(177)
+calls=2 251
+4788 2
+
+fl=(60)
+fn=(288)
+cfl=(60)
+cfn=(292) fast_function[inline]
+calls=2 4912
+4809 2
+
+fl=(60)
+fn=(288)
+cfl=(60)
+cfn=(292)
+calls=1149 4905
+4809 1149
+
+fl=(60)
+fn=(288)
+cfl=(60)
+cfn=(292)
+calls=1994 4929
+4809 1994
+
+fl=(60)
+fn=(288)
+cfl=(48)
+cfn=(182)
+calls=129 2480
+4812 129
+
+fl=(60)
+fn=(288)
+cfl=(48)
+cfn=(113)
+calls=664 2316
+4812 664
+
+fl=(60)
+fn=(288)
+4824 1
+
+fl=(60)
+fn=(288)
+4825 1
+
+fl=(60)
+fn=(288)
+4826 1
+
+fl=(60)
+fn=(293) _PyFunction_FastCall
+cfl=(88)
+cfn=(214)
+calls=1 625
+4859 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1151 3275
+4870 1151
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 1240
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 2815
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 2348
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 1254
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=111 3291
+4870 111
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 3233
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 1433
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 3522
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=5 3148
+4870 5
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=1 2249
+4870 1
+
+fl=(60)
+fn=(293)
+cfl=(60)
+cfn=(284)
+calls=2 3051
+4870 2
+
+fl=(60)
+fn=(292)
+cfl=(60)
+cfn=(293)
+calls=1159 4870
+4905 1159
+
+fl=(60)
+fn=(292)
+cfl=(60)
+cfn=(293)
+calls=2 4870
+4912 2
+
+fl=(60)
+fn=(292)
+cfl=(60)
+cfn=(291)
+calls=1 4055
+4929 1
+
+fl=(60)
+fn=(292)
+cfl=(60)
+cfn=(291)
+calls=2011 4119
+4929 2011
+
+fl=(60)
+fn=(176)
+4966 1
+
+fl=(60)
+fn=(176)
+cfl=(60)
+cfn=(293)
+calls=1 4859
+4972 1
+
+fl=(60)
+fn=(176)
+cfl=(60)
+cfn=(293)
+calls=98 4870
+4972 98
+
+fl=(60)
+fn=(176)
+cfl=(60)
+cfn=(291)
+calls=139 4119
+5021 139
+
+fl=(60)
+fn=(289)
+cfl=(78)
+cfn=(225)
+calls=21 98
+5053 21
+
+fl=(60)
+fn=(289)
+cfl=(78)
+cfn=(225)
+calls=90 114
+5053 90
+
+fl=(60)
+fn=(289)
+cfl=(48)
+cfn=(171)
+calls=2 2246
+5057 2
+
+fl=(60)
+fn=(286)
+cfl=(46)
+cfn=(111)
+calls=42 1592
+5166 42
+
+fl=(60)
+fn=(286)
+cfl=(46)
+cfn=(111)
+calls=12 1658
+5166 12
+
+fl=(60)
+fn=(286)
+cfl=(46)
+cfn=(111)
+calls=1 1629
+5166 1
+
+fl=(60)
+fn=(287)
+cfl=(96)
+cfn=(236)
+calls=1 663
+5268 1
+
+fl=(60)
+fn=(285)
+cfl=(87)
+cfn=(271)
+calls=1 11396
+5368 1
+
+fl=(103)
+fn=(283)
+cfl=??
+cfn=(294) __pthread_cond_signal
+calls=1 0
+187 1
+
+fl=(93)
+fn=(228)
+cfl=(90)
+cfn=(279)
+calls=6 990
+281 6
+
+fl=(93)
+fn=(228)
+cfl=(90)
+cfn=(279)
+calls=1341 974
+281 1341
+
+fl=(93)
+fn=(233)
+cfl=(90)
+cfn=(282)
+calls=1 1078
+334 1
+
+fl=(92)
+fn=(227)
+cfl=(46)
+cfn=(295) _imp_create_dynamic_impl[inline]
+calls=6 2004
+289 6
+
+fl=(105) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/compile.c
+fn=(296) PyAST_CompileObject
+cfl=(106) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/symtable.c
+cfn=(297) PySymtable_BuildObject
+calls=3 307
+334 3
+
+fl=(105)
+fn=(296)
+cfl=(105)
+cfn=(298) compiler_mod[inline]
+calls=1 1483
+341 1
+
+fl=(105)
+fn=(299) compiler_add_o
+cfl=(86)
+cfn=(208)
+calls=1 1552
+1133 1
+
+fl=(105)
+fn=(300) compiler_addop_o[inline]
+cfl=(105)
+cfn=(299)
+calls=1 1133
+1150 1
+
+fl=(105)
+fn=(301) compiler_body
+cfl=(105)
+cfn=(302) compiler_function
+calls=1 1896
+1463 1
+
+fl=(105)
+fn=(298)
+cfl=(105)
+cfn=(301)
+calls=1 1463
+1483 1
+
+fl=(105)
+fn=(303) compiler_make_closure
+cfl=(105)
+cfn=(300)
+calls=1 1150
+1602 1
+
+fl=(105)
+fn=(302)
+cfl=(105)
+cfn=(303)
+calls=1 1602
+1896 1
+
+fl=(97)
+fn=(304) PyErr_FormatV
+cfl=(87)
+cfn=(269)
+calls=1 2919
+829 1
+
+fl=(97)
+fn=(304)
+cfl=(87)
+cfn=(269)
+calls=1 2886
+829 1
+
+fl=(97)
+fn=(241)
+cfl=(97)
+cfn=(304)
+calls=2 829
+846 2
+
+fl=(107) /home/ilan/minonda/conda-bld/python-3.6_1482517219413/work/Python-3.6.0/Python/fileutils.c
+fn=(305) _Py_read
+cfl=??
+cfn=(306) __read_nocancel
+calls=1 0
+1198 1
+
+fl=(46)
+fn=(111)
+cfl=(48)
+cfn=(187)
+calls=1 2780
+1578 1
+
+fl=(46)
+fn=(111)
+cfl=(48)
+cfn=(187)
+calls=68 2780
+1592 68
+
+fl=(46)
+fn=(111)
+cfl=(46)
+cfn=(111)
+calls=1 1578
+1629 1
+
+fl=(46)
+fn=(111)
+cfl=(48)
+cfn=(187)
+calls=13 2780
+1658 13
+
+fl=(46)
+fn=(295)
+cfl=(62)
+cfn=(140)
+calls=2 124
+2004 2
+
+fl=(46)
+fn=(295)
+cfl=(62)
+cfn=(140)
+calls=4 154
+2004 4
+
+fl=(95)
+fn=(307) r_string
+660 1
+
+fl=(95)
+fn=(307)
+720 1
+
+fl=(95)
+fn=(308) r_long
+cfl=(95)
+cfn=(307)
+calls=1 660
+766 1
+
+fl=(95)
+fn=(308)
+cfl=(95)
+cfn=(307)
+calls=1 720
+766 1
+
+fl=(95)
+fn=(309) r_ref
+cfl=(77)
+cfn=(221)
+calls=1 304
+902 1
+
+fl=(95)
+fn=(310) r_object
+935 1
+
+fl=(95)
+fn=(310)
+cfl=(83)
+cfn=(193)
+calls=2 117
+1092 2
+
+fl=(95)
+fn=(310)
+cfl=(87)
+cfn=(266)
+calls=1 2172
+1133 1
+
+fl=(95)
+fn=(310)
+cfl=(87)
+cfn=(274)
+calls=2 15202
+1168 2
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(309)
+calls=1 902
+1170 1
+
+fl=(95)
+fn=(310)
+cfl=(75)
+cfn=(175)
+calls=2 114
+1188 2
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1356
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=3 1368
+1194 3
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 935
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1133
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1401
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=8 1365
+1194 8
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1170
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1362
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1395
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1428
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=2 1371
+1194 2
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1168
+1194 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(308)
+calls=1 766
+1356 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1092
+1362 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=18 1194
+1365 18
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1188
+1365 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=2 1194
+1368 2
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1188
+1368 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=2 1194
+1371 2
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1168
+1395 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(310)
+calls=1 1092
+1401 1
+
+fl=(95)
+fn=(310)
+cfl=(85)
+cfn=(196)
+calls=1 141
+1405 1
+
+fl=(95)
+fn=(310)
+cfl=(95)
+cfn=(308)
+calls=1 766
+1428 1
+
+fl=(95)
+fn=(311) read_object[inline]
+cfl=(95)
+cfn=(310)
+calls=11 1365
+1463 11
+
+fl=(95)
+fn=(311)
+cfl=(95)
+cfn=(310)
+calls=1 1405
+1463 1
+
+fl=(95)
+fn=(232)
+cfl=(95)
+cfn=(311)
+calls=12 1463
+1765 12
+
+fl=(98)
+fn=(272)
+cfl=(98)
+cfn=(312) siphash24
+calls=1 416
+186 1
+
+fl=(98)
+fn=(312)
+416 1
+
+fl=(102)
+fn=(281)
+cfl=(102)
+cfn=(313) PyParser_ASTFromStringObject
+calls=2 1115
+902 2
+
+fl=(102)
+fn=(281)
+cfl=(102)
+cfn=(314) run_mod[inline]
+calls=4 977
+904 4
+
+fl=(102)
+fn=(314)
+cfl=(105)
+cfn=(296)
+calls=3 334
+977 3
+
+fl=(102)
+fn=(314)
+cfl=(105)
+cfn=(296)
+calls=1 341
+977 1
+
+fl=(102)
+fn=(313)
+cfl=(101)
+cfn=(278)
+calls=2 263
+1115 2
+
+fl=(72)
+fn=(151)
+cfl=(107)
+cfn=(305)
+calls=1 1198
+304 1
+
+fl=(106)
+fn=(297)
+cfl=(106)
+cfn=(315) symtable_analyze[inline]
+calls=3 909
+307 3
+
+fl=(106)
+fn=(316) update_symbols[inline]
+cfl=(48)
+cfn=(189)
+calls=1 3146
+634 1
+
+fl=(106)
+fn=(317) analyze_block
+cfl=(106)
+cfn=(318) analyze_child_block[inline]
+calls=2 878
+814 2
+
+fl=(106)
+fn=(317)
+cfl=(106)
+cfn=(316)
+calls=1 634
+833 1
+
+fl=(106)
+fn=(317)
+cfl=(86)
+cfn=(210)
+calls=1 1921
+843 1
+
+fl=(106)
+fn=(317)
+cfl=(86)
+cfn=(210)
+calls=1 1933
+843 1
+
+fl=(106)
+fn=(318)
+cfl=(106)
+cfn=(317)
+calls=2 843
+878 2
+
+fl=(106)
+fn=(315)
+cfl=(106)
+cfn=(317)
+calls=1 833
+909 1
+
+fl=(106)
+fn=(315)
+cfl=(106)
+cfn=(317)
+calls=2 814
+909 2
+
+fl=(104)
+fn=(319) newtracebackobject[inline]
+cfl=(73)
+cfn=(165)
+calls=1 1748
+119 1
+
+fl=(104)
+fn=(290)
+cfl=(104)
+cfn=(319)
+calls=1 119
+137 1
+
+fl=(63)
+fn=(141)
+cfl=(63)
+cfn=(110)
+calls=1 31095
+30566 1
+
+fl=(63)
+fn=(110)
+cfl=(46)
+cfn=(111)
+calls=1 1592
+31095 1
+
+fl=(64)
+fn=(320) __Pyx_PyObject_GetAttrStr[inline]
+cfl=(53)
+cfn=(237)
+calls=1 1053
+1011 1
+
+fl=(64)
+fn=(321) __pyx_f_5scipy_6sparse_13_csparsetools__fill_dtype_map2[inline]
+cfl=(64)
+cfn=(320)
+calls=1 1011
+13569 1
+
+fl=(64)
+fn=(142)
+cfl=(64)
+cfn=(321)
+calls=1 13569
+32508 1
+
+fl=(108) /usr/include/c++/5/bits/alloc_traits.h
+fn=(322) std::allocator_traits::allocate[inline]
+cfl=(109) /usr/include/c++/5/ext/new_allocator.h
+cfn=(323) __gnu_cxx::new_allocator::allocate[inline]
+calls=22 104
+491 22
+
+fl=(108)
+fn=(324) std::allocator_traits::deallocate[inline]
+cfl=(109)
+cfn=(325) __gnu_cxx::new_allocator::deallocate[inline]
+calls=33 110
+517 33
+
+fl=(108)
+fn=(326) std::allocator_traits::construct[inline]
+cfl=(109)
+cfn=(327) __gnu_cxx::new_allocator::construct[inline]
+calls=1 120
+530 1
+
+fl=(110) /usr/include/c++/5/bits/move.h
+fn=(328) std::swap[inline]
+186 6
+
+fl=(110)
+fn=(328)
+187 7
+
+fl=(35)
+fn=(329) std::__move_median_to_first[inline]
+90 1
+
+fl=(35)
+fn=(330) std::__unguarded_linear_insert[inline]
+1822 1
+
+fl=(35)
+fn=(330)
+1823 1
+
+fl=(35)
+fn=(330)
+1825 2
+
+fl=(35)
+fn=(330)
+1827 1
+
+fl=(35)
+fn=(331) std::__unguarded_insertion_sort[inline]
+1861 1
+
+fl=(35)
+fn=(331)
+cfl=(35)
+cfn=(330)
+calls=2 1825
+1862 2
+
+fl=(35)
+fn=(331)
+cfl=(35)
+cfn=(330)
+calls=1 1827
+1862 1
+
+fl=(35)
+fn=(331)
+cfl=(35)
+cfn=(330)
+calls=1 1822
+1862 1
+
+fl=(35)
+fn=(331)
+cfl=(35)
+cfn=(330)
+calls=1 1823
+1862 1
+
+fl=(35)
+fn=(332) std::__final_insertion_sort[inline]
+cfl=(35)
+cfn=(331)
+calls=1 1861
+1881 1
+
+fl=(35)
+fn=(332)
+cfl=(35)
+cfn=(331)
+calls=5 1862
+1881 5
+
+fl=(35)
+fn=(333) std::__unguarded_partition[inline]
+1897 8
+
+fl=(35)
+fn=(333)
+1899 2
+
+fl=(35)
+fn=(333)
+1900 8
+
+fl=(35)
+fn=(333)
+1901 4
+
+fl=(35)
+fn=(333)
+1902 2
+
+fl=(35)
+fn=(333)
+cfl=(39)
+cfn=(334) std::iter_swap[inline]
+calls=13 148
+1904 13
+
+fl=(35)
+fn=(335) std::__unguarded_partition_pivot[inline]
+cfl=(35)
+cfn=(329)
+calls=1 90
+1916 1
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=13 1904
+1918 13
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=2 1902
+1918 2
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=8 1900
+1918 8
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=2 1899
+1918 2
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=4 1901
+1918 4
+
+fl=(35)
+fn=(335)
+cfl=(35)
+cfn=(333)
+calls=8 1897
+1918 8
+
+fl=(35)
+fn=(336) std::__introsort_loop
+1939 1
+
+fl=(35)
+fn=(336)
+1941 3
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(335)
+calls=37 1918
+1948 37
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(335)
+calls=1 1916
+1948 1
+
+fl=(35)
+fn=(336)
+1949 1
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(336)
+calls=1 1939
+1949 1
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(336)
+calls=33 1948
+1949 33
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(336)
+calls=118 1949
+1949 118
+
+fl=(35)
+fn=(336)
+cfl=(35)
+cfn=(336)
+calls=3 1941
+1949 3
+
+fl=(35)
+fn=(337) std::__sort[inline]
+cfl=(35)
+cfn=(336)
+calls=5 1948
+1963 5
+
+fl=(35)
+fn=(337)
+cfl=(35)
+cfn=(336)
+calls=38 1949
+1963 38
+
+fl=(35)
+fn=(337)
+cfl=(35)
+cfn=(332)
+calls=6 1881
+1966 6
+
+fl=(35)
+fn=(70)
+cfl=(35)
+cfn=(337)
+calls=43 1963
+4698 43
+
+fl=(35)
+fn=(70)
+cfl=(35)
+cfn=(337)
+calls=6 1966
+4698 6
+
+fl=(39)
+fn=(334)
+cfl=(110)
+cfn=(328)
+calls=7 187
+148 7
+
+fl=(39)
+fn=(334)
+cfl=(110)
+cfn=(328)
+calls=6 186
+148 6
+
+fl=(39)
+fn=(93)
+224 1
+
+fl=(39)
+fn=(338) std::__copy_move::__copy_m[inline]
+cfl=(14)
+cfn=(22)
+calls=3 238
+384 3
+
+fl=(39)
+fn=(339) std::__copy_move_a[inline]
+cfl=(39)
+cfn=(338)
+calls=3 384
+402 3
+
+fl=(39)
+fn=(340) std::__copy_move_a2[inline]
+cfl=(39)
+cfn=(339)
+calls=3 402
+440 3
+
+fl=(39)
+fn=(341) std::copy[inline]
+cfl=(39)
+cfn=(340)
+calls=3 440
+472 3
+
+fl=(39)
+fn=(342) std::__fill_a[inline]
+cfl=(15)
+cfn=(24)
+calls=2 161
+723 2
+
+fl=(39)
+fn=(343) std::__fill_n_a[inline]
+cfl=(15)
+cfn=(24)
+calls=10 161
+770 10
+
+fl=(39)
+fn=(343)
+cfl=(39)
+cfn=(342)
+calls=2 723
+779 2
+
+fl=(39)
+fn=(344) std::fill_n[inline]
+cfl=(39)
+cfn=(343)
+calls=2 779
+805 2
+
+fl=(39)
+fn=(344)
+cfl=(39)
+cfn=(343)
+calls=10 770
+805 10
+
+fl=(34)
+fn=(68)
+87 1
+
+fl=(111) /usr/include/c++/5/bits/stl_construct.h
+fn=(345) std::_Construct[inline]
+75 1
+
+fl=(112) /usr/include/c++/5/bits/stl_uninitialized.h
+fn=(346) std::__uninitialized_copy::__uninit_copy[inline]
+cfl=(39)
+cfn=(341)
+calls=3 472
+93 3
+
+fl=(112)
+fn=(347) std::uninitialized_copy[inline]
+cfl=(112)
+cfn=(346)
+calls=3 93
+126 3
+
+fl=(112)
+fn=(348) std::__uninitialized_fill_n::__uninit_fill_n[inline]
+cfl=(39)
+cfn=(344)
+calls=2 805
+220 2
+
+fl=(112)
+fn=(349) std::uninitialized_fill_n[inline]
+cfl=(112)
+cfn=(348)
+calls=1 220
+247 1
+
+fl=(112)
+fn=(350) std::__uninitialized_copy_a[inline]
+cfl=(112)
+cfn=(347)
+calls=3 126
+281 3
+
+fl=(112)
+fn=(351) std::__uninitialized_move_if_noexcept_a[inline]
+cfl=(112)
+cfn=(350)
+calls=3 281
+304 3
+
+fl=(112)
+fn=(352) std::__uninitialized_fill_n_a[inline]
+cfl=(112)
+cfn=(349)
+calls=1 247
+358 1
+
+fl=(112)
+fn=(353) std::__uninitialized_default_n_1::__uninit_default_n[inline]
+cfl=(111)
+cfn=(345)
+calls=1 75
+519 1
+
+fl=(112)
+fn=(353)
+cfl=(39)
+cfn=(344)
+calls=10 805
+540 10
+
+fl=(112)
+fn=(354) std::__uninitialized_default_n[inline]
+cfl=(112)
+cfn=(353)
+calls=10 540
+575 10
+
+fl=(112)
+fn=(354)
+cfl=(112)
+cfn=(353)
+calls=1 519
+575 1
+
+fl=(112)
+fn=(355) std::__uninitialized_default_n_a[inline]
+cfl=(112)
+cfn=(354)
+calls=11 575
+637 11
+
+fl=(18)
+fn=(356) std::_Vector_base::_Vector_base[inline]
+cfl=(18)
+cfn=(357) std::_Vector_base::_M_create_storage[inline]
+calls=3 185
+136 3
+
+fl=(18)
+fn=(356)
+cfl=(18)
+cfn=(357)
+calls=13 187
+136 13
+
+fl=(18)
+fn=(358) std::_Vector_base::~_Vector_base[inline]
+cfl=(18)
+cfn=(359) std::_Vector_base::_M_deallocate[inline]
+calls=2 177
+160 2
+
+fl=(18)
+fn=(360) std::_Vector_base::_M_allocate[inline]
+cfl=(108)
+cfn=(322)
+calls=22 491
+170 22
+
+fl=(18)
+fn=(359)
+177 2
+
+fl=(18)
+fn=(359)
+cfl=(108)
+cfn=(324)
+calls=33 517
+178 33
+
+fl=(18)
+fn=(357)
+cfl=(18)
+cfn=(360)
+calls=22 170
+185 22
+
+fl=(18)
+fn=(357)
+185 1
+
+fl=(18)
+fn=(357)
+cfl=(15)
+cfn=(24)
+calls=11 161
+187 11
+
+fl=(18)
+fn=(357)
+cfl=(15)
+cfn=(24)
+calls=1 49
+187 1
+
+fl=(18)
+fn=(357)
+cfl=(15)
+cfn=(24)
+calls=1 53
+187 1
+
+fl=(18)
+fn=(66)
+cfl=(18)
+cfn=(356)
+calls=7 136
+278 7
+
+fl=(18)
+fn=(66)
+cfl=(18)
+cfn=(356)
+calls=9 136
+291 9
+
+fl=(18)
+fn=(66)
+cfl=(18)
+cfn=(361) std::vector::_M_fill_initialize[inline]
+calls=1 1301
+292 1
+
+fl=(18)
+fn=(362) std::vector::~vector[inline]
+cfl=(18)
+cfn=(358)
+calls=2 160
+425 2
+
+fl=(18)
+fn=(27)
+655 1
+
+fl=(18)
+fn=(40)
+cfl=(31)
+cfn=(363) std::vector::_M_default_append
+calls=11 565
+676 11
+
+fl=(18)
+fn=(57)
+780 3
+
+fl=(18)
+fn=(361)
+cfl=(112)
+cfn=(352)
+calls=1 358
+1301 1
+
+fl=(20)
+fn=(29)
+cfl=(20)
+cfn=(364) std::unique_ptr::get[inline]
+calls=120 305
+299 120
+
+fl=(20)
+fn=(364)
+305 120
+
+fl=(31)
+fn=(56)
+cfl=(108)
+cfn=(326)
+calls=1 530
+96 1
+
+fl=(31)
+fn=(56)
+98 5
+
+fl=(31)
+fn=(56)
+cfl=(31)
+cfn=(365) std::vector::_M_emplace_back_aux[inline]
+calls=3 420
+101 3
+
+fl=(31)
+fn=(365)
+cfl=(112)
+cfn=(351)
+calls=3 304
+420 3
+
+fl=(31)
+fn=(363)
+cfl=(112)
+cfn=(355)
+calls=11 637
+565 11
+
+fl=(109)
+fn=(323)
+cfl=??
+cfn=(366) operator new
+calls=20 0
+104 20
+
+fl=(109)
+fn=(323)
+cfl=(15)
+cfn=(24)
+calls=2 161
+104 2
+
+fl=(109)
+fn=(325)
+cfl=(9)
+cfn=(16)
+calls=15 2966
+110 15
+
+fl=(109)
+fn=(325)
+cfl=??
+cfn=(367) operator delete
+calls=2 0
+110 2
+
+fl=(109)
+fn=(325)
+cfl=(9)
+cfn=(16)
+calls=3 2967
+110 3
+
+fl=(109)
+fn=(325)
+cfl=(9)
+cfn=(16)
+calls=2 2932
+110 2
+
+fl=(109)
+fn=(325)
+110 3
+
+fl=(109)
+fn=(325)
+cfl=(9)
+cfn=(16)
+calls=8 2938
+110 8
+
+fl=(109)
+fn=(327)
+120 1
+
+fl=(30)
+fn=(368) std::_Function_handler::_M_invoke
+1857 4
+
+fl=(30)
+fn=(369) _M_invoke
+cfl=(29)
+cfn=(65)
+calls=22 1115
+1857 22
+
+fl=(30)
+fn=(55)
+cfl=(38)
+cfn=(90)
+calls=1 86
+2267 1
+
+fl=(30)
+fn=(55)
+cfl=(30)
+cfn=(369)
+calls=22 1857
+2267 22
+
+fl=(30)
+fn=(55)
+cfl=(30)
+cfn=(368)
+calls=4 1857
+2267 4
+
+fl=(30)
+fn=(55)
+2267 2
+
+fl=(113) /usr/include/x86_64-linux-gnu/bits/string3.h
+fn=(370) memcpy[inline]
+cfl=(14)
+cfn=(23)
+calls=1 264
+53 1
+
+fl=(113)
+fn=(370)
+cfl=(14)
+cfn=(23)
+calls=1 265
+53 1
+
+fl=(113)
+fn=(371) memset[inline]
+90 1
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(372) LightGBM::Dataset::ConstructHistograms [clone ._omp_fn.7]
+calls=45 710
+0 45
+
+fl=??
+fn=(47)
+cfl=(28)
+cfn=(373) LightGBM::SerialTreeLearner::AddPredictionToScore [clone ._omp_fn.0]
+calls=10 61
+0 10
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(374) LightGBM::Dataset::ConstructHistograms [clone ._omp_fn.5]
+calls=387 631
+0 387
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(375) LightGBM::Dataset::FinishLoad [clone ._omp_fn.0]
+calls=2 296
+0 2
+
+fl=??
+fn=(47)
+cfl=(40)
+cfn=(376) LightGBM::LeafSplits::Init [clone ._omp_fn.16]
+calls=1 55
+0 1
+
+fl=??
+fn=(377) omp_set_num_threads@@VERSION[inline]
+cfl=??
+cfn=(377)
+calls=10 0
+0 10
+
+fl=??
+fn=(47)
+cfl=(37)
+cfn=(378) LightGBM::DataPartition::Split [clone ._omp_fn.24]
+calls=2 135
+0 2
+
+fl=??
+fn=(47)
+cfl=(25)
+cfn=(379) LightGBM::SerialTreeLearner::FindBestThresholds [clone ._omp_fn.22]
+calls=1 492
+0 1
+
+fl=??
+fn=(47)
+cfl=(38)
+cfn=(380) LightGBM::HistogramPool::DynamicChangeSize [clone ._omp_fn.2]
+calls=1 473
+0 1
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(381) LightGBM::BinaryLogloss::GetGradients [clone ._omp_fn.10]
+calls=2 90
+0 2
+
+fl=??
+fn=(382) operator
+0 1
+
+fl=??
+fn=(382)
+0 1
+
+fl=??
+fn=(377)
+cfl=??
+cfn=(47)
+calls=1 0
+0 1
+
+fl=??
+fn=(47)
+cfl=(37)
+cfn=(383) LightGBM::DataPartition::Split [clone ._omp_fn.23]
+calls=39 115
+0 39
+
+fl=??
+fn=(382)
+0 1
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(384) LightGBM::BinaryLogloss::Init [clone ._omp_fn.12]
+calls=1 55
+0 1
+
+fl=??
+fn=(164)
+0 3
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(381)
+calls=1 91
+0 1
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(385) LightGBM::Dataset::ConstructHistograms [clone ._omp_fn.3]
+calls=18 593
+0 18
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(374)
+calls=1 622
+0 1
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(385)
+calls=19 594
+0 19
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(384)
+calls=7 54
+0 7
+
+fl=??
+fn=(382)
+0 2
+
+fl=??
+fn=(306)
+0 1
+
+fl=??
+fn=(382)
+0 1
+
+fl=??
+fn=(47)
+cfl=(32)
+cfn=(386) LightGBM::DatasetLoader::CostructFromSampleData [clone ._omp_fn.0]
+calls=51 507
+0 51
+
+fl=??
+fn=(47)
+cfl=(37)
+cfn=(387) LightGBM::DataPartition::Init [clone ._omp_fn.15]
+calls=1 65
+0 1
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(381)
+calls=5 94
+0 5
+
+fl=??
+fn=(382)
+0 2
+
+fl=??
+fn=(47)
+cfl=??
+cfn=(47)
+calls=3 0
+0 3
+
+fl=??
+fn=(47)
+cfl=(15)
+cfn=(24)
+calls=1 161
+0 1
+
+fl=??
+fn=(47)
+cfl=(3)
+cfn=(5)
+calls=1 87
+0 1
+
+fl=??
+fn=(382)
+0 4
+
+fl=??
+fn=(54)
+cfl=??
+cfn=(377)
+calls=1 0
+0 1
+
+fl=??
+fn=(382)
+0 10
+
+fl=??
+fn=(47)
+cfl=(29)
+cfn=(59)
+calls=50 484
+0 50
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(381)
+calls=1 96
+0 1
+
+fl=??
+fn=(294)
+0 1
+
+fl=??
+fn=(47)
+cfl=(33)
+cfn=(374)
+calls=1 624
+0 1
+
+fl=??
+fn=(47)
+cfl=(27)
+cfn=(381)
+calls=3 97
+0 3
+
